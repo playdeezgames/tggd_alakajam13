@@ -44,7 +44,7 @@ namespace state
 	static void SaveToAutosave()
 	{
 		game::AutoSave();
-		application::UIState::Write(::UIState::IN_PLAY_NEXT);
+		//TODO: application::UIState::Write(::UIState::IN_PLAY_NEXT);
 	}
 
 	static std::function<void()> SlotSaver(int slot, ::UIState confirmState)
@@ -57,7 +57,7 @@ namespace state
 				return;
 			}
 			game::SaveToSlot(slot);
-			application::UIState::Write(::UIState::IN_PLAY_NEXT);
+			//TODO: application::UIState::Write(::UIState::IN_PLAY_NEXT);
 		};
 	}
 

@@ -32,7 +32,7 @@ namespace state
 		if (ticksLeft == 0)
 		{
 			game::Statistics::Increment(game::Statistic::GAMES_PLAYED);
-			application::UIState::Write(::UIState::IN_PLAY_NEXT);
+			//TODO: application::UIState::Write(::UIState::IN_PLAY_NEXT);
 			ticksLeft = TICKS_TOTAL;
 		}
 	}

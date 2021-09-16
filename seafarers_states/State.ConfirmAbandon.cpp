@@ -24,7 +24,7 @@ namespace state
 
 	static void CancelAbandon()
 	{
-		application::UIState::Write(::UIState::IN_PLAY_NEXT);
+		//TODO: application::UIState::Write(::UIState::IN_PLAY_NEXT);
 	}
 
 	static const std::map<ConfirmAbandonItem, std::function<void()>> activators =

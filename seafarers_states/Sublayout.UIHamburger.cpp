@@ -16,8 +16,6 @@ namespace sublayout
 
 	static const std::vector<::UIState> states =
 	{
-		::UIState::IN_PLAY_AT_SEA,
-		::UIState::IN_PLAY_CHANGE_HEADING
 	};
 
 	static void OnMouseMotionInArea(const std::string& area, const common::XY<int>&)
