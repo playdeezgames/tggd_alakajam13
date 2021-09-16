@@ -1,0 +1,51 @@
+[
+    {
+        "type": "Image",
+        "sprite": "Background",
+        "color": "DarkGray",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "type": "Text",
+        "font": "default",
+        "color": "Gray",
+        "text-id": "Tip1",
+        "text": "(line 1 of tip)",
+        "x": 320,
+        "y": 140,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Text",
+        "font": "default",
+        "color": "Gray",
+        "text-id": "Tip2",
+        "text": "(line 2 of tip)",
+        "x": 320,
+        "y": 172,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Text",
+        "font": "default",
+        "color": "Gray",
+        "text-id": "Tip3",
+        "text": "(line 3 of tip)",
+        "x": 320,
+        "y": 204,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    }
+]

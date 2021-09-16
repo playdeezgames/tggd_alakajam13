@@ -1,0 +1,50 @@
+[
+    {
+        "type": "Image",
+        "sprite": "Background",
+        "color": "DarkGray",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "type": "Text",
+        "font": "default",
+        "color": "LightGreen",
+        "text": "==STATISTICS==",
+        "x": 320,
+        "y": 8,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Text",
+        "font": "font5x7",
+        "color": "Gray",
+        "text-id": "MovesMade",
+        "text": "<moves made>",
+        "x": 160,
+        "y": 32,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 1,
+        "drop-shadow-y": 1
+    },
+    {
+        "type": "Text",
+        "font": "font5x7",
+        "color": "Gray",
+        "text-id": "GamesPlayed",
+        "text": "<games played>",
+        "x": 160,
+        "y": 144,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 1,
+        "drop-shadow-y": 1
+    }
+]
