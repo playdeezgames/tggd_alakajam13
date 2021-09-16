@@ -29,7 +29,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "seafarers_visuals", "..\sea
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "seafarers_states", "..\seafarers_states\seafarers_states.vcxproj", "{27D2BB30-00FA-4268-A380-6A378D3B5B44}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "seafarers", "seafarers", "{A46A500D-99E1-466D-8FDE-0908578338BE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "alakajam13", "alakajam13", "{A46A500D-99E1-466D-8FDE-0908578338BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "splorr", "splorr", "{10B67714-AAD9-4FBA-A669-2A22A2D05E24}"
 EndProject

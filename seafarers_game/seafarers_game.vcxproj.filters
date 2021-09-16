@@ -29,9 +29,6 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files\Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Game.Achievements.h">
-      <Filter>Header Files\Utility</Filter>
-    </ClInclude>
     <ClInclude Include="Game.Colors.h">
       <Filter>Header Files\Utility</Filter>
     </ClInclude>

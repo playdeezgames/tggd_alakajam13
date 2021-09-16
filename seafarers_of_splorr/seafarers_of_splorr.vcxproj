@@ -159,7 +159,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.Starters.cpp" />
-    <ClCompile Include="Game.Achievements.cpp" />
     <ClCompile Include="Game.Audio.Mux.cpp" />
     <ClCompile Include="Game.Audio.Sfx.cpp" />
     <ClCompile Include="Game.Avatar.Docked.Messages.cpp" />

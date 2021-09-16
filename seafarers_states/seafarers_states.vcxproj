@@ -35,7 +35,6 @@
     <ClCompile Include="State.SaveGame.cpp" />
     <ClCompile Include="State.Splash.cpp" />
     <ClCompile Include="State.StartGame.cpp" />
-    <ClCompile Include="State.Statistics.cpp" />
     <ClCompile Include="State.Tip.cpp" />
     <ClCompile Include="Sublayout.UIHamburger.cpp" />
   </ItemGroup>

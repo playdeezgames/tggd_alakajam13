@@ -7,7 +7,6 @@
 #include <Common.RNG.h>
 #include <Data.JSON.Store.h>
 #include <Data.JSON.Stores.h>
-#include <Game.Achievements.h>
 #include <Game.Audio.Mux.h>
 #include "States.h"
 #include "UIState.h"
@@ -31,7 +30,6 @@ namespace state
 		ticksLeft = (ticksLeft > ticks) ? (ticksLeft - ticks) : (0);
 		if (ticksLeft == 0)
 		{
-			game::Statistics::Increment(game::Statistic::GAMES_PLAYED);
 			//TODO: application::UIState::Write(::UIState::IN_PLAY_NEXT);
 			ticksLeft = TICKS_TOTAL;
 		}

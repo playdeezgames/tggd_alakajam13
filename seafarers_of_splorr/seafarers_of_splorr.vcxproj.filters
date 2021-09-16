@@ -7,9 +7,6 @@
     <ClCompile Include="Application.Starters.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Game.Achievements.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Game.Audio.Mux.cpp">
       <Filter>Source</Filter>
     </ClCompile>

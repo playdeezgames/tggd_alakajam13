@@ -39,7 +39,6 @@ namespace state
 	{
 		{ MainMenuItem::START, ::application::UIState::GoTo(::UIState::START_GAME) },
 		{ MainMenuItem::OPTIONS, ::application::UIState::PushTo(::UIState::OPTIONS)  },
-		{ MainMenuItem::STATISTICS, ::application::UIState::GoTo(::UIState::STATISTICS)  },
 		{ MainMenuItem::ABOUT, GoToAbout },
 		{ MainMenuItem::QUIT, ::application::UIState::GoTo(::UIState::CONFIRM_QUIT)  },
 	};

@@ -58,9 +58,6 @@
     <ClCompile Include="State.StartGame.cpp">
       <Filter>Source Files\Boilerplate</Filter>
     </ClCompile>
-    <ClCompile Include="State.Statistics.cpp">
-      <Filter>Source Files\Boilerplate</Filter>
-    </ClCompile>
     <ClCompile Include="State.Tip.cpp">
       <Filter>Source Files\Boilerplate</Filter>
     </ClCompile>
