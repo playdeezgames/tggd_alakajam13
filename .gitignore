@@ -348,3 +348,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+**/autosave.db
+/splorr_data_tests/loadTest.json
+/splorr_data_tests/saveTest.json

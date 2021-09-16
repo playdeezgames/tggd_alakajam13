@@ -1,0 +1,157 @@
+[
+    {
+        "type": "Image",
+        "sprite": "Background",
+        "color": "DarkGray",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "type": "Text",
+        "font": "default",
+        "color": "LightGreen",
+        "text": "==OPTIONS==",
+        "x": 320,
+        "y": 8,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Menu",
+        "menu-id": "Options",
+        "index": 3,
+        "font": "default",
+        "colors": {
+            "active": "Cyan",
+            "inactive": "Gray"
+        },
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2,
+        "menu-items": [
+            {
+                "menu-item-id": "Mute",
+                "text": "<mute state>",
+                "x": 320,
+                "y": 32
+            },
+            {
+                "menu-item-id": "SfxVolume",
+                "text": "<sfx volume>",
+                "x": 320,
+                "y": 48
+            },
+            {
+                "menu-item-id": "MuxVolume",
+                "text": "<mux volume>",
+                "x": 320,
+                "y": 64
+            },
+            {
+                "text": "Toggle Fullscreen",
+                "menu-item-id": "ToggleFullscreen",
+                "x": 320,
+                "y": 80
+            },
+            {
+                "text": "Back",
+                "menu-item-id": "Back",
+                "x": 320,
+                "y": 96
+            }
+        ]
+    },
+    {
+        "type":"Area",
+        "area-id":"Mute",
+        "x":240,
+        "y":32,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"Options",
+            "menu-item-id":"Mute"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"DecreaseSfxVolume",
+        "x":0,
+        "y":48,
+        "width":320,
+        "height":16,
+        "menu":{
+            "menu-id":"Options",
+            "menu-item-id":"SfxVolume"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"IncreaseSfxVolume",
+        "x":320,
+        "y":48,
+        "width":320,
+        "height":16,
+        "menu":{
+            "menu-id":"Options",
+            "menu-item-id":"SfxVolume"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"DecreaseMuxVolume",
+        "x":0,
+        "y":64,
+        "width":320,
+        "height":16,
+        "menu":{
+            "menu-id":"Options",
+            "menu-item-id":"MuxVolume"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"IncreaseMuxVolume",
+        "x":320,
+        "y":64,
+        "width":320,
+        "height":16,
+        "menu":{
+            "menu-id":"Options",
+            "menu-item-id":"MuxVolume"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"ToggleFullscreen",
+        "x":160,
+        "y":80,
+        "width":320,
+        "height":16,
+        "menu":{
+            "menu-id":"Options",
+            "menu-item-id":"ToggleFullscreen"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"Back",
+        "x":240,
+        "y":96,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"Options",
+            "menu-item-id":"Back"
+        }
+    },
+    {
+        "type": "Layout",
+        "name": "Sublayout.Modded"
+    }
+]

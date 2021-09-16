@@ -1,0 +1,18 @@
+{
+    "splash": "assets/images/splash.png",
+    "font": "assets/images/fonts/font.png",
+    "font35": "assets/images/fonts/Font3x5.png",
+    "font46": "assets/images/fonts/Font4x6.png",
+    "font57": "assets/images/fonts/Font5x7.png",
+    "background": "assets/images/background.png",
+    "cards": "assets/images/cards.png",
+    "card-back": "assets/images/card-back.png",
+    "ui-hamburger": "assets/images/ui-hamburger.png",
+    "ui-close": "assets/images/ui-close.png",
+    "current-heading":"assets/images/current-heading.png",
+    "new-heading":"assets/images/new-heading.png",
+    "at-sea-icons":"assets/images/at-sea-icons.png",
+    "at-sea-view-circle":"assets/images/at-sea-view-circle.png",
+    "world-map":"assets/images/world-map.png",
+    "world-map-icons":"assets/images/world-map-icons.png"
+}

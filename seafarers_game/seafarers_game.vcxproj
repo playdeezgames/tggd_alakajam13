@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.Fishboard.h" />
+    <ClInclude Include="Game.Fishery.h" />
+    <ClInclude Include="Game.FishDescriptor.h" />
+    <ClInclude Include="Game.Fisheries.h" />
+    <ClInclude Include="Game.Achievements.h" />
+    <ClInclude Include="Game.Audio.GameSfx.h" />
+    <ClInclude Include="Game.Audio.Mux.h" />
+    <ClInclude Include="Game.Audio.Sfx.h" />
+    <ClInclude Include="Game.Audio.Theme.h" />
+    <ClInclude Include="Game.Avatar.AtSea.h" />
+    <ClInclude Include="Game.Avatar.Destination.h" />
+    <ClInclude Include="Game.Avatar.Destinations.h" />
+    <ClInclude Include="Game.Avatar.h" />
+    <ClInclude Include="Game.Avatar.Plight.h" />
+    <ClInclude Include="Game.Avatar.PlightDescriptor.h" />
+    <ClInclude Include="Game.Avatar.Plights.h" />
+    <ClInclude Include="Game.Avatar.PlightType.h" />
+    <ClInclude Include="Game.Avatar.ShipStatistics.h" />
+    <ClInclude Include="Game.Avatar.StateTransition.h" />
+    <ClInclude Include="Game.Avatar.Docked.h" />
+    <ClInclude Include="Game.Avatar.Action.h" />
+    <ClInclude Include="Game.Avatar.State.h" />
+    <ClInclude Include="Game.Avatar.Items.h" />
+    <ClInclude Include="Game.Avatar.Log.h" />
+    <ClInclude Include="Game.Avatar.Quest.h" />
+    <ClInclude Include="Game.Avatar.Ship.h" />
+    <ClInclude Include="Game.Avatar.Statistic.h" />
+    <ClInclude Include="Game.Avatar.Statistics.h" />
+    <ClInclude Include="Game.Commodities.h" />
+    <ClInclude Include="Game.Commodity.h" />
+    <ClInclude Include="Game.CommodityDescriptor.h" />
+    <ClInclude Include="Game.Demigod.h" />
+    <ClInclude Include="Game.Demigods.h" />
+    <ClInclude Include="Game.Difficulty.h" />
+    <ClInclude Include="Game.Feature.h" />
+    <ClInclude Include="Game.FeatureDescriptor.h" />
+    <ClInclude Include="Game.Features.h" />
+    <ClInclude Include="Game.Fish.h" />
+    <ClInclude Include="Game.Fishes.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Game.Island.h" />
+    <ClInclude Include="Game.Islands.Commodities.h" />
+    <ClInclude Include="Game.Islands.DarkAlley.FightCard.h" />
+    <ClInclude Include="Game.Islands.DarkAlley.GamblingHand.h" />
+    <ClInclude Include="Game.Islands.DarkAlley.h" />
+    <ClInclude Include="Game.Islands.Features.h" />
+    <ClInclude Include="Game.Islands.h" />
+    <ClInclude Include="Game.Islands.Items.h" />
+    <ClInclude Include="Game.Islands.Markets.h" />
+    <ClInclude Include="Game.Islands.Quests.h" />
+    <ClInclude Include="Game.Islands.Ships.h" />
+    <ClInclude Include="Game.Item.h" />
+    <ClInclude Include="Game.ItemDescriptor.h" />
+    <ClInclude Include="Game.Items.h" />
+    <ClInclude Include="Game.Merchant.h" />
+    <ClInclude Include="Game.Merchants.h" />
+    <ClInclude Include="Game.Quest.h" />
+    <ClInclude Include="Game.Ship.h" />
+    <ClInclude Include="Game.Ship.Property.h" />
+    <ClInclude Include="Game.ShipDescriptor.h" />
+    <ClInclude Include="Game.Ships.h" />
+    <ClInclude Include="Game.ShipStatistic.h" />
+    <ClInclude Include="Game.ShipStatisticDescriptor.h" />
+    <ClInclude Include="Game.Side.h" />
+    <ClInclude Include="Game.World.h" />
+    <ClInclude Include="Game.Colors.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game.Avatar.AtSea.cpp" />
+    <ClCompile Include="Game.Avatar.cpp" />
+    <ClCompile Include="Game.Avatar.Destinations.cpp" />
+    <ClCompile Include="Game.Avatar.ActionDescriptors.cpp" />
+    <ClCompile Include="Game.Avatar.Docked.cpp" />
+    <ClCompile Include="Game.Avatar.Items.cpp" />
+    <ClCompile Include="Game.Avatar.Log.cpp" />
+    <ClCompile Include="Game.Avatar.Plights.cpp" />
+    <ClCompile Include="Game.Avatar.Quest.cpp" />
+    <ClCompile Include="Game.Avatar.Ship.cpp" />
+    <ClCompile Include="Game.Avatar.ShipStatistics.cpp" />
+    <ClCompile Include="Game.Avatar.Statistics.cpp" />
+    <ClCompile Include="Game.Commodities.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Game.Demigods.cpp" />
+    <ClCompile Include="Game.Features.cpp" />
+    <ClCompile Include="Game.Fishboard.cpp" />
+    <ClCompile Include="Game.Fisheries.cpp" />
+    <ClCompile Include="Game.Fishes.cpp" />
+    <ClCompile Include="Game.Islands.Commodities.cpp" />
+    <ClCompile Include="Game.Islands.cpp" />
+    <ClCompile Include="Game.Islands.DarkAlley.cpp" />
+    <ClCompile Include="Game.Islands.DarkAlley.FightCard.cpp" />
+    <ClCompile Include="Game.Islands.DarkAlley.GamblingHand.cpp" />
+    <ClCompile Include="Game.Islands.Features.cpp" />
+    <ClCompile Include="Game.Islands.Generation.cpp" />
+    <ClCompile Include="Game.Islands.Items.cpp" />
+    <ClCompile Include="Game.Islands.Markets.cpp" />
+    <ClCompile Include="Game.Islands.Quests.cpp" />
+    <ClCompile Include="Game.Islands.Ships.cpp" />
+    <ClCompile Include="Game.Items.cpp" />
+    <ClCompile Include="Game.Merchants.cpp" />
+    <ClCompile Include="Game.Ships.cpp" />
+    <ClCompile Include="Game.World.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{6e53f361-de75-4341-b9ae-016854c64749}</ProjectGuid>
+    <RootNamespace>seafarersgame</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\splorr_cards;..\splorr_data;..\splorr_common;..\seafarers_data;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\splorr_cards;..\splorr_data;..\splorr_common;..\seafarers_data;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

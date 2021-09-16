@@ -1,0 +1,79 @@
+[
+    {
+        "type": "Image",
+        "sprite": "Background",
+        "color": "DarkGray",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "type": "Text",
+        "font": "default",
+        "color": "LightGreen",
+        "text": "==DARK ALLEY==",
+        "x": 320,
+        "y": 8,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Menu",
+        "menu-id": "DarkAlley",
+        "index": 0,
+        "font": "default",
+        "colors": {
+            "active": "Cyan",
+            "inactive": "Gray"
+        },
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2,
+        "menu-items": [
+            {
+                "text": "Leave",
+                "menu-item-id": "Leave",
+                "x": 320,
+                "y": 32
+            },
+            {
+                "text": "Gamble",
+                "menu-item-id": "Gamble",
+                "x": 320,
+                "y": 48
+            }
+        ]
+    },
+    {
+        "type":"Area",
+        "area-id":"Leave",
+        "x":240,
+        "y":32,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"DarkAlley",
+            "menu-item-id":"Leave"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"Gamble",
+        "x":240,
+        "y":48,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"DarkAlley",
+            "menu-item-id":"Gamble"
+        }
+    },
+    {
+        "type": "Layout",
+        "name": "Sublayout.Modded"
+    }
+]

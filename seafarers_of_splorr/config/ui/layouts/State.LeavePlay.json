@@ -1,0 +1,115 @@
+[
+    {
+        "type": "Image",
+        "sprite": "Background",
+        "color": "DarkGray",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "type": "Text",
+        "font": "default",
+        "color": "LightRed",
+        "text": "==Game Menu==",
+        "x": 320,
+        "y": 8,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Menu",
+        "menu-id": "LeavePlay",
+        "index": 0,
+        "font": "default",
+        "colors": {
+            "active": "Cyan",
+            "inactive": "Gray"
+        },
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2,
+        "menu-items": [
+            {
+                "text": "Continue Session",
+                "menu-item-id": "Continue",
+                "x": 320,
+                "y": 32
+            },
+            {
+                "text": "Save",
+                "menu-item-id": "Save",
+                "x": 320,
+                "y": 48
+            },
+            {
+                "text": "Options",
+                "menu-item-id": "Options",
+                "x": 320,
+                "y": 64
+            },
+            {
+                "text": "Abandon Session",
+                "menu-item-id": "Abandon",
+                "x": 320,
+                "y": 80
+            }
+        ]
+    },
+    {
+        "type":"Area",
+        "area-id":"Continue",
+        "x":0,
+        "y":32,
+        "width":640,
+        "height":16,
+        "menu": {
+            "menu-id": "LeavePlay",
+            "menu-item-id": "Continue"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"Save",
+        "x":0,
+        "y":48,
+        "width":640,
+        "height":16,
+        "menu": {
+            "menu-id": "LeavePlay",
+            "menu-item-id": "Save"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"Options",
+        "x":0,
+        "y":64,
+        "width":640,
+        "height":16,
+        "menu": {
+            "menu-id": "LeavePlay",
+            "menu-item-id": "Options"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"Abandon",
+        "x":0,
+        "y":80,
+        "width":640,
+        "height":16,
+        "menu": {
+            "menu-id": "LeavePlay",
+            "menu-item-id": "Abandon"
+        }
+    },
+    {
+        "type": "Layout",
+        "name": "Sublayout.Modded"
+    }
+]

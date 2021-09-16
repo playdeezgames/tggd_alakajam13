@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Visuals.Confirmation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Confirmations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Message.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.MessageDetail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.HorizontalAlignment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Messages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Colors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Data.Properties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Textures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Sprites.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Fonts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Areas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Images.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Layouts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Menus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.SpriteGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Texts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.DrawerFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.AreaMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Area.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.MenuItems.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.Sublayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Visuals.Confirmations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Messages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Colors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Textures.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Sprites.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Fonts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Areas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Images.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Layouts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Menus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.SpriteGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Sublayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Texts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.Area.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

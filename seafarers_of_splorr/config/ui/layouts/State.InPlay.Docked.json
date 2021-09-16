@@ -1,0 +1,179 @@
+[
+    {
+        "type": "Image",
+        "sprite": "Background",
+        "color": "DarkGray",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "type": "Text",
+        "font": "default",
+        "color": "LightGreen",
+        "text": "==DOCKED==",
+        "x": 320,
+        "y": 8,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Menu",
+        "menu-id": "Order",
+        "index": 0,
+        "font": "default",
+        "colors": {
+            "active": "Cyan",
+            "inactive": "Gray"
+        },
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2,
+        "menu-items": [
+            {
+                "text": "Undock",
+                "menu-item-id": "Undock",
+                "x": 320,
+                "y": 32
+            },
+            {
+                "text": "Jobs",
+                "menu-item-id": "Jobs",
+                "x": 320,
+                "y": 48
+            },
+            {
+                "text": "Trade",
+                "menu-item-id": "Trade",
+                "x": 320,
+                "y": 64
+            },
+            {
+                "text": "Shipyard",
+                "menu-item-id": "Shipyard",
+                "x": 320,
+                "y": 80
+            },
+            {
+                "text": "Dark Alley",
+                "menu-item-id": "DarkAlley",
+                "x": 320,
+                "y": 96
+            },
+            {
+                "text": "<temple>",
+                "menu-item-id": "Temple",
+                "x": 320,
+                "y": 112
+            }
+        ]
+    },
+    {
+        "type":"Area",
+        "area-id":"Undock",
+        "x":240,
+        "y":32,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"Order",
+            "menu-item-id":"Undock"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"Jobs",
+        "x":240,
+        "y":48,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"Order",
+            "menu-item-id":"Jobs"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"Trade",
+        "x":240,
+        "y":64,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"Order",
+            "menu-item-id":"Trade"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"Shipyard",
+        "x":240,
+        "y":80,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"Order",
+            "menu-item-id":"Shipyard"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"DarkAlley",
+        "x":240,
+        "y":96,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"Order",
+            "menu-item-id":"DarkAlley"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"Temple",
+        "x":240,
+        "y":112,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"Order",
+            "menu-item-id":"Temple"
+        }
+    },
+    {
+        "type": "Text",
+        "text-id": "island-name",
+        "font": "default",
+        "color": "Gray",
+        "text": "<name>",
+        "x": 632,
+        "y": 320,
+        "horizontal-alignment": -1,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Text",
+        "text-id": "island-visits",
+        "font": "default",
+        "color": "Gray",
+        "text": "<visits>",
+        "x": 632,
+        "y": 336,
+        "horizontal-alignment": -1,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Layout",
+        "name": "Sublayout.Modded"
+    }
+]

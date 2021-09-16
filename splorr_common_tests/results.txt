@@ -1,0 +1,120 @@
+Started Test: common::Data::ToDouble should return 0.0 when given garbage
+Test Passed: common::Data::ToDouble should return 0.0 when given garbage
+
+Started Test: common::Data::ToDouble should parse a valid int
+Test Passed: common::Data::ToDouble should parse a valid int
+
+Started Test: common::Data::ToDouble should parse a valid double
+Test Passed: common::Data::ToDouble should parse a valid double
+
+Started Test: common::Data::ToInt should return 0 when given garbage
+Test Passed: common::Data::ToInt should return 0 when given garbage
+
+Started Test: common::Data::ToInt should parse a valid int
+Test Passed: common::Data::ToInt should parse a valid int
+
+Started Test: common::Data::ToOptionalInt should return nullopt when given empty string
+Test Passed: common::Data::ToOptionalInt should return nullopt when given empty string
+
+Started Test: common::Data::ToOptionalInt should parse a valid int
+Test Passed: common::Data::ToOptionalInt should parse a valid int
+
+Started Test: common::Data::ToOptionalDouble should return nullopt when given empty string
+Test Passed: common::Data::ToOptionalDouble should return nullopt when given empty string
+
+Started Test: common::Data::ToOptionalDouble should parse a valid int
+Test Passed: common::Data::ToOptionalDouble should parse a valid int
+
+Started Test: common::Data::ToOptionalDouble should parse a valid double
+Test Passed: common::Data::ToOptionalDouble should parse a valid double
+
+Started Test: common::Data::ToPercentage should return nullopt when given a 0 for maximum
+Test Passed: common::Data::ToPercentage should return nullopt when given a 0 for maximum
+
+Started Test: common::Data::ToPercentage should return percentage when given a nonzero for maximum
+Test Passed: common::Data::ToPercentage should return percentage when given a nonzero for maximum
+
+Started Test: common::Data::ClampDouble should return minimum when value is less than minimum
+Test Passed: common::Data::ClampDouble should return minimum when value is less than minimum
+
+Started Test: common::Data::ClampDouble should return maximum when value is greater than minimum
+Test Passed: common::Data::ClampDouble should return maximum when value is greater than minimum
+
+Started Test: common::Data::ClampDouble should return value when value is in range
+Test Passed: common::Data::ClampDouble should return value when value is in range
+
+Started Test: common::Data::ModuloDouble should return nullopt when divisor is 0.0
+Test Passed: common::Data::ModuloDouble should return nullopt when divisor is 0.0
+
+Started Test: common::Data::ModuloDouble should return value when provided value is between 0 and divisor
+Test Passed: common::Data::ModuloDouble should return value when provided value is between 0 and divisor
+
+Started Test: common::Data::ModuloDouble should return positive value less than divisor when provided value is negative
+Test Passed: common::Data::ModuloDouble should return positive value less than divisor when provided value is negative
+
+Started Test: common::Data::ModuloDouble should return positive value less than divisor when provided value is greater than divisor
+Test Passed: common::Data::ModuloDouble should return positive value less than divisor when provided value is greater than divisor
+
+Started Test: common::Data::QuoteString should put single quotes around a string
+Test Passed: common::Data::QuoteString should put single quotes around a string
+
+Started Test: common::Data::QuoteString should put double quotes existing within input string
+Test Passed: common::Data::QuoteString should put double quotes existing within input string
+
+Started Test: common::Data::OfOptional should return NULL when passed nullopt
+Test Passed: common::Data::OfOptional should return NULL when passed nullopt
+
+Started Test: common::Data::OfOptional should return string equivalent value when passed an int
+Test Passed: common::Data::OfOptional should return string equivalent value when passed an int
+
+Started Test: common::RNG::FromRange(int,int) should generate numbers within the specified range
+Test Passed: common::RNG::FromRange(int,int) should generate numbers within the specified range
+
+Started Test: common::RNG::FromRange(size_t,size_t) should generate numbers within the specified range
+Test Passed: common::RNG::FromRange(size_t,size_t) should generate numbers within the specified range
+
+Started Test: common::RNG::FromRange(double,double) should generate numbers within the specified range
+Test Passed: common::RNG::FromRange(double,double) should generate numbers within the specified range
+
+Started Test: common::RNG::FromList should return nullopt when given an empty list
+Test Passed: common::RNG::FromList should return nullopt when given an empty list
+
+Started Test: common::RNG::FromList should return that value when given a list with one value
+Test Passed: common::RNG::FromList should return that value when given a list with one value
+
+Started Test: common::RNG::FromList should return that value that is in the input list
+Test Passed: common::RNG::FromList should return that value that is in the input list
+
+Started Test: common::RNG::FromGenerator should return the default result when the table is empty
+Test Passed: common::RNG::FromGenerator should return the default result when the table is empty
+
+Started Test: common::RNG::FromGenerator should return a result from the table when the table is not empty
+Test Passed: common::RNG::FromGenerator should return a result from the table when the table is not empty
+
+Started Test: common::XY constructor should keep x and y values
+Test Passed: common::XY constructor should keep x and y values
+
+Started Test: common::XY operator+ should add x and y values toether
+Test Passed: common::XY operator+ should add x and y values toether
+
+Started Test: common::XY operator- should subtract x and y values
+Test Passed: common::XY operator- should subtract x and y values
+
+Started Test: common::XY operator== should return false when the values are not equal
+Test Passed: common::XY operator== should return false when the values are not equal
+
+Started Test: common::XY operator== should return true when the values are equal
+Test Passed: common::XY operator== should return true when the values are equal
+
+Started Test: common::XY operator* should multiply values by a scalar
+Test Passed: common::XY operator* should multiply values by a scalar
+
+Started Test: common::XY operator/ should divide values by a scalar
+Test Passed: common::XY operator/ should divide values by a scalar
+
+Started Test: common::XY operator* (scalar first) should multiply values by a scalar
+Test Passed: common::XY operator* (scalar first) should multiply values by a scalar
+
+Total Tests: 39
+Total Passed: 39
+Total Failed: 0

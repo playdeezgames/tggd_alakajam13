@@ -1,0 +1,131 @@
+[
+    {
+        "type": "Image",
+        "sprite": "Background",
+        "color": "DarkGray",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "type": "Text",
+        "font": "default",
+        "color": "LightGreen",
+        "text": "==PLACE YER BETS==",
+        "x": 320,
+        "y": 8,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Image",
+        "image-id": "FirstCard",
+        "sprite": "CardBackRed",
+        "color": "White",
+        "x": 256,
+        "y": 112
+    },
+    {
+        "type": "Image",
+        "image-id": "SecondCard",
+        "sprite": "CardBackRed",
+        "color": "White",
+        "x": 320,
+        "y": 112
+    },
+    {
+        "type": "Image",
+        "image-id": "ThirdCard",
+        "sprite": "CardBackRed",
+        "color": "White",
+        "x": 288,
+        "y": 184
+    },
+    {
+        "type": "Text",
+        "text-id":"Result",
+        "font": "default",
+        "color": "Gray",
+        "text": "<result>",
+        "x": 320,
+        "y": 48,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Text",
+        "text-id":"WinLose",
+        "font": "default",
+        "color": "Gray",
+        "text": "<win-lose>",
+        "x": 320,
+        "y": 80,
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2
+    },
+    {
+        "type": "Menu",
+        "menu-id": "Proceed",
+        "index": 0,
+        "font": "default",
+        "colors": {
+            "active": "Cyan",
+            "inactive": "Gray"
+        },
+        "horizontal-alignment": 0,
+        "drop-shadow": true,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 2,
+        "drop-shadow-y": 2,
+        "menu-items": [
+            {
+                "text": "Play Again",
+                "menu-item-id": "PlayAgain",
+                "x": 320,
+                "y": 272
+            },
+            {
+                "text": "Leave",
+                "menu-item-id": "Leave",
+                "x": 320,
+                "y": 288
+            }
+        ]
+    },
+    {
+        "type":"Area",
+        "area-id":"PlayAgain",
+        "x":240,
+        "y":272,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"Proceed",
+            "menu-item-id":"PlayAgain"
+        }
+    },
+    {
+        "type":"Area",
+        "area-id":"Leave",
+        "x":240,
+        "y":288,
+        "width":160,
+        "height":16,
+        "menu":{
+            "menu-id":"Proceed",
+            "menu-item-id":"Leave"
+        }
+    },
+    {
+        "type": "Layout",
+        "name": "Sublayout.Modded"
+    }
+]

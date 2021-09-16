@@ -1,0 +1,6 @@
+{
+  "death": "assets/audio/sfx/death.wav",
+  "enemyhit": "assets/audio/sfx/enemyhit.wav",
+  "hit": "assets/audio/sfx/hit.wav",
+  "woohoo": "assets/audio/sfx/woohoo.wav"
+}

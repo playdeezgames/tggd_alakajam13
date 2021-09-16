@@ -1,0 +1,9 @@
+Started Test: data::JSON::Load should load a json file
+Test Passed: data::JSON::Load should load a json file
+
+Started Test: data::JSON::Save should save a json file
+Test Passed: data::JSON::Save should save a json file
+
+Total Tests: 2
+Total Passed: 2
+Total Failed: 0
