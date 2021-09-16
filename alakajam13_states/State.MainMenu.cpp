@@ -25,7 +25,6 @@ namespace state
 	{
 		START,
 		ABOUT,
-		STATISTICS,
 		OPTIONS,
 		QUIT
 	};
