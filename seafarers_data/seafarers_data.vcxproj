@@ -19,69 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Data.Game.Avatar.DemigodFavor.h" />
-    <ClInclude Include="Data.Game.Avatar.Destination.h" />
-    <ClInclude Include="Data.Game.Avatar.DestinationName.h" />
-    <ClInclude Include="Data.Game.Avatar.Dock.h" />
-    <ClInclude Include="Data.Game.Avatar.h" />
-    <ClInclude Include="Data.Game.Avatar.Items.h" />
-    <ClInclude Include="Data.Game.Avatar.Log.h" />
-    <ClInclude Include="Data.Game.Avatar.Plight.h" />
-    <ClInclude Include="Data.Game.Avatar.Quest.h" />
-    <ClInclude Include="Data.Game.Avatar.Ship.h" />
-    <ClInclude Include="Data.Game.Avatar.ShipStatistic.h" />
-    <ClInclude Include="Data.Game.Avatar.Statistic.h" />
     <ClInclude Include="Data.Game.Common.h" />
-    <ClInclude Include="Data.Game.Demigod.h" />
-    <ClInclude Include="Data.Game.DemigodItem.h" />
-    <ClInclude Include="Data.Game.FishBoard.h" />
-    <ClInclude Include="Data.Game.Fishery.h" />
-    <ClInclude Include="Data.Game.FishGame.h" />
-    <ClInclude Include="Data.Game.Island.DarkAlley.FightCard.h" />
-    <ClInclude Include="Data.Game.Island.DarkAlley.GamblingHand.h" />
-    <ClInclude Include="Data.Game.Island.DarkAlley.h" />
-    <ClInclude Include="Data.Game.Island.Feature.h" />
-    <ClInclude Include="Data.Game.Island.h" />
-    <ClInclude Include="Data.Game.Island.Item.h" />
-    <ClInclude Include="Data.Game.Island.Known.h" />
-    <ClInclude Include="Data.Game.Island.Market.h" />
-    <ClInclude Include="Data.Game.Island.Quest.h" />
-    <ClInclude Include="Data.Game.Island.Visit.h" />
-    <ClInclude Include="Data.Game.Merchant.h" />
     <ClInclude Include="Data.Game.World.h" />
     <ClInclude Include="Data.JSON.Store.h" />
     <ClInclude Include="Data.SQLite.Store.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Data.Game.Avatar.cpp" />
-    <ClCompile Include="Data.Game.Avatar.DemigodFavor.cpp" />
-    <ClCompile Include="Data.Game.Avatar.Destination.cpp" />
-    <ClCompile Include="Data.Game.Avatar.DestinationNames.cpp" />
-    <ClCompile Include="Data.Game.Avatar.Dock.cpp" />
-    <ClCompile Include="Data.Game.Avatar.Items.cpp" />
-    <ClCompile Include="Data.Game.Avatar.Log.cpp" />
-    <ClCompile Include="Data.Game.Avatar.Plight.cpp" />
-    <ClCompile Include="Data.Game.Avatar.Quest.cpp" />
-    <ClCompile Include="Data.Game.Avatar.Ship.cpp" />
-    <ClCompile Include="Data.Game.Avatar.ShipStatistic.cpp" />
-    <ClCompile Include="Data.Game.Avatar.Statistic.cpp" />
     <ClCompile Include="Data.Game.Common.cpp" />
-    <ClCompile Include="Data.Game.Demigod.cpp" />
-    <ClCompile Include="Data.Game.DemigodItem.cpp" />
-    <ClCompile Include="Data.Game.FishBoard.cpp" />
-    <ClCompile Include="Data.Game.Fishery.cpp" />
-    <ClCompile Include="Data.Game.FishGame.cpp" />
-    <ClCompile Include="Data.Game.Island.cpp" />
-    <ClCompile Include="Data.Game.Island.DarkAlley.cpp" />
-    <ClCompile Include="Data.Game.Island.DarkAlley.FightCard.cpp" />
-    <ClCompile Include="Data.Game.Island.DarkAlley.GamblingHand.cpp" />
-    <ClCompile Include="Data.Game.Island.Feature.cpp" />
-    <ClCompile Include="Data.Game.Island.Item.cpp" />
-    <ClCompile Include="Data.Game.Island.Known.cpp" />
-    <ClCompile Include="Data.Game.Island.Market.cpp" />
-    <ClCompile Include="Data.Game.Island.Quest.cpp" />
-    <ClCompile Include="Data.Game.Island.Visit.cpp" />
-    <ClCompile Include="Data.Game.Merchant.cpp" />
     <ClCompile Include="Data.Game.World.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

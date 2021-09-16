@@ -2,18 +2,6 @@
 #include <Data.SQLite.Store.h>
 #include <Data.SQLite.Stores.h>
 #include "Game.h"
-#include "Game.Avatar.AtSea.h"
-#include "Game.Avatar.Docked.h"
-#include "Game.Avatar.Items.h"
-#include "Game.Avatar.Log.h"
-#include "Game.Avatar.Ship.h"
-#include "Game.Avatar.Statistics.h"
-#include "Game.Demigods.h"
-#include "Game.Fisheries.h"
-#include "Game.Islands.h"
-#include "Game.Islands.Features.h"
-#include "Game.Merchants.h"
-#include "Game.Avatar.Plights.h"
 #include "Game.World.h"
 #include <list>
 #include <map>
@@ -37,17 +25,6 @@ namespace game
 	{
 		data::sqlite::Stores::Bounce(data::sqlite::Store::IN_MEMORY);
 		World::Reset(difficulty);
-		Demigods::Reset(difficulty);
-		Islands::Reset(difficulty);
-		islands::Features::Reset(difficulty);
-		avatar::AtSea::Reset(difficulty);
-		avatar::Docked::Reset(difficulty);
-		avatar::Statistics::Reset(difficulty);
-		avatar::Items::Reset(difficulty);
-		avatar::Ship::Reset(difficulty);
-		avatar::Log::Reset(difficulty);
-		Merchants::Reset(difficulty);
-		Fisheries::Reset(difficulty);
 		for (auto& resetter : resetters)
 		{
 			resetter();
@@ -118,11 +95,5 @@ namespace game
 
 	void ApplyTurnEffects()
 	{
-		avatar::AtSea::ApplyTurnEffects();
-		Islands::ApplyTurnEffects();
-		Merchants::ApplyTurnEffects();
-		avatar::Plights::ApplyTurnEffects();
-		Demigods::ApplyTurnEffects();
-		Fisheries::ApplyTurnEffects();
 	}
 }

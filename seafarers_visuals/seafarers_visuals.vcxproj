@@ -20,15 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Visuals.CardSprites.h" />
-    <ClInclude Include="Visuals.Fishboard.h" />
-    <ClInclude Include="Visuals.Navigator.h" />
-    <ClInclude Include="Visuals.WorldMap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Visuals.CardSprites.cpp" />
-    <ClCompile Include="Visuals.Fishboard.cpp" />
-    <ClCompile Include="Visuals.Navigator.cpp" />
-    <ClCompile Include="Visuals.WorldMap.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
