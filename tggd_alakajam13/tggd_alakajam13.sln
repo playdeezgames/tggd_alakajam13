@@ -41,6 +41,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "splorr_data_tests", "..\spl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "splorr_platform", "..\splorr_platform\splorr_platform.vcxproj", "{B07E388A-92F4-4AC2-85F8-64A9334A8B98}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stuff", "Stuff", "{E3DCD201-3668-49A4-ABD2-F77E0BBA6A2D}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

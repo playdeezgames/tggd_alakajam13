@@ -37,6 +37,7 @@ namespace state
 	static void ContinueGame()
 	{
 		//TODO: application::UIState::Write(::UIState::IN_PLAY_NEXT);
+		application::UIState::Write(::UIState::MAIN_MENU);
 	}
 
 	static const std::map<LeavePlayItem, std::function<void()>> activators =

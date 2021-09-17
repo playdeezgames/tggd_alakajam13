@@ -13,7 +13,7 @@
 #include <Visuals.Texts.h>
 namespace state
 {
-	static const size_t TICKS_TOTAL = 3000;
+	static const size_t TICKS_TOTAL = 5000;
 	static const std::string LAYOUT_NAME = "State.Tip";
 	static const std::string TEXT_TIP_1 = "Tip1";
 	static const std::string TEXT_TIP_2 = "Tip2";
@@ -31,6 +31,7 @@ namespace state
 		if (ticksLeft == 0)
 		{
 			//TODO: application::UIState::Write(::UIState::IN_PLAY_NEXT);
+			application::UIState::Write(::UIState::MAIN_MENU);
 			ticksLeft = TICKS_TOTAL;
 		}
 	}

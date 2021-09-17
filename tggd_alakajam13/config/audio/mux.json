@@ -1,3 +1,5 @@
 {
-    "main":"assets/audio/mux/Main_Theme.ogg"
+    "main":"assets/audio/mux/main.ogg",
+    "lose":"assets/audio/mux/main.ogg",
+    "win":"assets/audio/mux/main.ogg"
 }

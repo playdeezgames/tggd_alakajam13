@@ -36,6 +36,7 @@ namespace state
 		int slot = slotTable.find((::UIState)application::UIState::Read())->second;
 		game::SaveToSlot(slot);
 		//TODO: application::UIState::Write(::UIState::IN_PLAY_NEXT);
+		application::UIState::Write(::UIState::MAIN_MENU);
 	}
 
 	static const std::map<ConfirmOverwriteItem, std::function<void()>> activators =
