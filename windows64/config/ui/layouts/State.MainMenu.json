@@ -2,7 +2,7 @@
     {
         "type": "Image",
         "sprite": "Background",
-        "color": "DarkGray",
+        "color": "White",
         "x": 0,
         "y": 0
     },
@@ -47,22 +47,16 @@
                 "y": 48
             },
             {
-                "text": "Stats",
-                "menu-item-id": "Stats",
-                "x": 320,
-                "y": 64
-            },
-            {
                 "text": "Options",
                 "menu-item-id": "Options",
                 "x": 320,
-                "y": 80
+                "y": 64
             },
             {
                 "text": "Quit",
                 "menu-item-id": "Quit",
                 "x": 320,
-                "y": 96
+                "y": 80
             }
         ]
     },
@@ -94,7 +88,7 @@
         "type":"Area",
         "area-id":"Options",
         "x":240,
-        "y":80,
+        "y":64,
         "width":160,
         "height":16,
         "menu":{
@@ -104,21 +98,9 @@
     },
     {
         "type":"Area",
-        "area-id":"Statistics",
-        "x":240,
-        "y":64,
-        "width":160,
-        "height":16,
-        "menu":{
-            "menu-id":"Main",
-            "menu-item-id":"Stats"
-        }
-    },
-    {
-        "type":"Area",
         "area-id":"Quit",
         "x":240,
-        "y":96,
+        "y":80,
         "width":160,
         "height":16,
         "menu":{
