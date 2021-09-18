@@ -40,10 +40,34 @@ namespace game
 		return actors;
 	}
 
-	void Actors::MoveActor(const common::XY<int>& delta)
+	static std::optional<size_t> FindActor(const common::XY<int>& location)
+	{
+		for (size_t index = 0; index < actors.size(); ++index)
+		{
+			if (actors[index].location == location)
+			{
+				return index;
+			}
+		}
+		return std::nullopt;
+	}
+
+	static bool DoMoveActor(Actor& actor, const common::XY<int>& location)
+	{
+		auto otherIndex = FindActor(location);
+		if (otherIndex)
+		{
+			return false;
+		}
+		actor.location = location;
+		return true;
+	}
+
+	bool Actors::MoveActor(const common::XY<int>& delta)
 	{
 		Actor& actor = actors[actorIndex];
-		actor.location = actor.location + delta;
+		auto newLocation = actor.location + delta;
+		return DoMoveActor(actor, newLocation);
 	}
 
 }

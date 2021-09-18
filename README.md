@@ -1,5 +1,6 @@
 # Robots of SPLORR!!
 Entry for Alakajam 13
+**Note: wine may not be supported
 
 ## Music
 

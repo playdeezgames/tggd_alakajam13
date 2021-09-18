@@ -59,9 +59,11 @@ namespace state::in_play
 	{
 		return [delta]() 
 		{
-			game::Actors::MoveActor(delta);
-			game::Actors::Next();
-			application::UIState::Write(::UIState::IN_PLAY_NEXT);
+			if (game::Actors::MoveActor(delta))
+			{
+				game::Actors::Next();
+				application::UIState::Write(::UIState::IN_PLAY_NEXT);
+			}
 		};
 	}
 

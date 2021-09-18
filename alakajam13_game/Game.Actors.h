@@ -12,6 +12,6 @@ namespace game
 		static const Actor& GetCurrent();
 		static void Reset(const Difficulty&);
 		static const std::vector<Actor>& All();
-		static void MoveActor(const common::XY<int>&);
+		static bool MoveActor(const common::XY<int>&);
 	};
 }
