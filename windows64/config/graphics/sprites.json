@@ -3197,5 +3197,103 @@
         "y": 0,
         "width": 16,
         "height": 16
+    },
+    "Frame": {
+        "texture": "frame",
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 360
+    },
+    "Robot1": {
+        "texture": "tiles",
+        "x": 0,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Trash": {
+        "texture": "tiles",
+        "x": 36,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Turd": {
+        "texture": "tiles",
+        "x": 72,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Pig": {
+        "texture": "tiles",
+        "x": 108,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Fence": {
+        "texture": "tiles",
+        "x": 144,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Selector": {
+        "texture": "tiles",
+        "x": 180,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Robot2": {
+        "texture": "tiles",
+        "x": 0,
+        "y": 36,
+        "width": 36,
+        "height": 36
+    },
+    "TurdRobot1": {
+        "texture": "tiles",
+        "x": 36,
+        "y": 36,
+        "width": 36,
+        "height": 36
+    },
+    "TurdRobot2": {
+        "texture": "tiles",
+        "x": 72,
+        "y": 36,
+        "width": 36,
+        "height": 36
+    },
+    "TurdRobot3": {
+        "texture": "tiles",
+        "x": 108,
+        "y": 36,
+        "width": 36,
+        "height": 36
+    },
+    "TurdRobot4": {
+        "texture": "tiles",
+        "x": 144,
+        "y": 36,
+        "width": 36,
+        "height": 36
+    },
+    "Robot3": {
+        "texture": "tiles",
+        "x": 0,
+        "y": 72,
+        "width": 36,
+        "height": 36
+    },
+    "Robot4": {
+        "texture": "tiles",
+        "x": 0,
+        "y": 108,
+        "width": 36,
+        "height": 36
     }
 }

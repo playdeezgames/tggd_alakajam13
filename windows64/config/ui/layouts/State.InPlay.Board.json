@@ -1,0 +1,36 @@
+[
+    {
+        "type": "Image",
+        "sprite": "Background",
+        "color": "White",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "type": "Image",
+        "sprite": "Frame",
+        "color": "White",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "type": "SpriteGrid",
+        "sprite-grid-id": "Grid",
+        "color": "White",
+        "x": 18,
+        "y": 18,
+        "cell-width":36,
+        "cell-height":36,
+        "drop-shadow": false,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 0,
+        "drop-shadow-y": 0
+    },
+    {
+        "type": "Image",
+        "sprite": "Selector",
+        "color": "White",
+        "x": 162,
+        "y": 162
+    }
+]

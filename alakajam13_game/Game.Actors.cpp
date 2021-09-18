@@ -5,6 +5,7 @@
 #include <functional>
 #include <Common.RNG.h>
 #include <list>
+#include <set>
 namespace game
 {
 	static std::vector<Actor> actors;
@@ -17,6 +18,7 @@ namespace game
 
 	void Actors::AddActor(const Actor& actor)
 	{
+		//TODO: first check for a DELETED actor
 		actors.push_back(actor);
 	}
 
@@ -87,7 +89,7 @@ namespace game
 	{
 		for (size_t index = 0; index < actors.size(); ++index)
 		{
-			if (actors[index].location == location)
+			if (actors[index].location == location && actors[index].actorType!=ActorType::DELETED)
 			{
 				return index;
 			}
@@ -95,12 +97,62 @@ namespace game
 		return std::nullopt;
 	}
 
+	static const std::map<ActorType, ActorType> turdBumpers =
+	{
+		{ActorType::ROBOT_1, ActorType::TURD_ROBOT_1},
+		{ActorType::ROBOT_2, ActorType::TURD_ROBOT_2},
+		{ActorType::ROBOT_3, ActorType::TURD_ROBOT_3},
+		{ActorType::ROBOT_4, ActorType::TURD_ROBOT_4}
+	};
+
+	static bool OnInteractTurd(Actor& bumped, Actor& bumper)
+	{
+		auto iter = turdBumpers.find(bumper.actorType);
+		if(iter!=turdBumpers.end())
+		{
+			bumped.actorType = ActorType::DELETED;
+			bumper.actorType = iter->second;
+			return true;
+		}
+		return false;
+	}
+
+	static const std::map<ActorType, ActorType> trashBumper =
+	{
+		{ActorType::TURD_ROBOT_1, ActorType::ROBOT_1},
+		{ActorType::TURD_ROBOT_2, ActorType::ROBOT_2},
+		{ActorType::TURD_ROBOT_3, ActorType::ROBOT_3},
+		{ActorType::TURD_ROBOT_4, ActorType::ROBOT_4}
+	};
+
+	static bool OnInteractTrash(Actor& bumped, Actor& bumper)
+	{
+		auto iter = trashBumper.find(bumper.actorType);
+		if (iter != trashBumper.end())
+		{
+			bumper.actorType = iter->second;
+			return true;
+		}
+		return false;
+	}
+
+	static const std::map<ActorType, std::function<bool(Actor&, Actor&)>> interactors =
+	{
+		{ActorType::TURD, OnInteractTurd},
+		{ActorType::TRASH, OnInteractTrash}
+	};
+
 	static bool DoMoveActor(Actor& actor, const common::XY<int>& location)
 	{
 		auto otherIndex = FindActor(location);
 		if (otherIndex)
 		{
-			//TODO: interaction
+			auto& other = actors[otherIndex.value()];
+			auto interactor = interactors.find(other.actorType);
+			if (interactor != interactors.end())
+			{
+				return interactor->second(other, actor);
+			}
 			return false;
 		}
 		actor.location = location;
@@ -133,15 +185,24 @@ namespace game
 		{false, 2}
 	};
 
+	static const std::map<bool, size_t> moveGenerator =
+	{
+		{true, 1},
+		{false, 4}
+	};
+
 	static void BeAPig(Actor& actor)
 	{
-		auto delta = common::RNG::FromList(moveDeltas).value();
-		auto original = actor.location;
-		if (Actors::MoveActor(delta))
+		if (common::RNG::FromGenerator(moveGenerator, false))
 		{
-			if (common::RNG::FromGenerator(turdGenerator, false))
+			auto delta = common::RNG::FromList(moveDeltas).value();
+			auto original = actor.location;
+			if (Actors::MoveActor(delta))
 			{
-				Actors::AddActor({ActorType::TURD, original});
+				if (common::RNG::FromGenerator(turdGenerator, false))
+				{
+					Actors::AddActor({ActorType::TURD, original});
+				}
 			}
 		}
 	}
@@ -151,7 +212,8 @@ namespace game
 		{ActorType::FENCE, DoNothing},
 		{ActorType::PIG, BeAPig},
 		{ActorType::TRASH, DoNothing},
-		{ActorType::TURD, DoNothing}
+		{ActorType::TURD, DoNothing},
+		{ActorType::DELETED, DoNothing}
 	};
 
 	void Actors::Act(Actor& actor)

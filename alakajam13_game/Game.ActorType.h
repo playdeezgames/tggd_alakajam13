@@ -14,6 +14,7 @@ namespace game
 		FENCE,
 		PIG,
 		TRASH,
-		TURD
+		TURD,
+		DELETED
 	};
 }

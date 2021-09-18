@@ -28,12 +28,15 @@ namespace state::in_play
 		int maximumRow = minimumRow + BOARD_ROWS;
 		for (auto actor : game::Actors::All())
 		{
-			if (actor.location.GetX() >= minimumColumn && actor.location.GetX() < maximumColumn && actor.location.GetY() >= minimumRow && actor.location.GetY() < maximumRow)
+			if (actor.actorType != game::ActorType::DELETED)
 			{
-				auto descriptor = game::ActorTypes::Read(actor.actorType);
-				int plotX = actor.location.GetX() - currentActor.location.GetX() - BOARD_OFFSET_COLUMN;
-				int plotY = actor.location.GetY() - currentActor.location.GetY() - BOARD_OFFSET_ROW;
-				visuals::SpriteGrid::SetCell(LAYOUT_NAME, SPRITE_GRID, { plotX, plotY }, descriptor.sprite, "White");
+				if (actor.location.GetX() >= minimumColumn && actor.location.GetX() < maximumColumn && actor.location.GetY() >= minimumRow && actor.location.GetY() < maximumRow)
+				{
+					auto descriptor = game::ActorTypes::Read(actor.actorType);
+					int plotX = actor.location.GetX() - currentActor.location.GetX() - BOARD_OFFSET_COLUMN;
+					int plotY = actor.location.GetY() - currentActor.location.GetY() - BOARD_OFFSET_ROW;
+					visuals::SpriteGrid::SetCell(LAYOUT_NAME, SPRITE_GRID, { plotX, plotY }, descriptor.sprite, "White");
+				}
 			}
 		}
 	}
