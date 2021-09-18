@@ -7,6 +7,8 @@ namespace game
 		ROBOT_2,
 		ROBOT_3,
 		ROBOT_4,
-		FENCE
+		FENCE,
+		PIG,
+		TRASH
 	};
 }

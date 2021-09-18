@@ -8,7 +8,9 @@ namespace game
 		{ActorType::ROBOT_2, { "Robot2", true }},
 		{ActorType::ROBOT_3, { "Robot3", true }},
 		{ActorType::ROBOT_4, { "Robot4", true }},
-		{ActorType::FENCE, { "Fence", false }}
+		{ActorType::FENCE, { "Fence", false }},
+		{ActorType::PIG, { "Pig", false }},
+		{ActorType::TRASH, { "Trash", false }}
 	};
 
 	const ActorTypeDescriptor& ActorTypes::Read(const ActorType& actorType)

@@ -52,11 +52,26 @@ namespace game
 		Actors::AddActor({ ActorType::FENCE, {BOARD_SIZE,BOARD_SIZE} });
 	}
 
+	static void AddPigs()
+	{
+		Actors::AddActor({ ActorType::PIG, {-BOARD_SIZE+1,-BOARD_SIZE+1} });
+		Actors::AddActor({ ActorType::PIG, {-BOARD_SIZE+1,BOARD_SIZE-1} });
+		Actors::AddActor({ ActorType::PIG, {BOARD_SIZE-1,-BOARD_SIZE+1} });
+		Actors::AddActor({ ActorType::PIG, {BOARD_SIZE-1,BOARD_SIZE-1} });
+	}
+
+	static void AddTrash()
+	{
+		Actors::AddActor({ ActorType::TRASH, {0,0} });
+	}
+
 	void Actors::Reset(const Difficulty&)
 	{
 		Clear();
 		AddRobots();
 		AddFence();
+		AddPigs();
+		AddTrash();
 	}
 	
 	const std::vector<Actor>& Actors::All()
