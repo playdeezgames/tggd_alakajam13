@@ -10,7 +10,7 @@ namespace game
 		actorIndex = (actorIndex + 1) % actors.size();
 	}
 
-	void  Actors::AddActor(const Actor& actor)
+	void Actors::AddActor(const Actor& actor)
 	{
 		actors.push_back(actor);
 	}
@@ -39,4 +39,11 @@ namespace game
 	{
 		return actors;
 	}
+
+	void Actors::MoveActor(const common::XY<int>& delta)
+	{
+		Actor& actor = actors[actorIndex];
+		actor.location = actor.location + delta;
+	}
+
 }

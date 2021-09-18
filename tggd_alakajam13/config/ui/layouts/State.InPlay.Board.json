@@ -25,5 +25,12 @@
         "drop-shadow-color": "Black",
         "drop-shadow-x": 0,
         "drop-shadow-y": 0
+    },
+    {
+        "type": "Image",
+        "sprite": "Selector",
+        "color": "White",
+        "x": 162,
+        "y": 162
     }
 ]

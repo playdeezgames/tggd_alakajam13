@@ -55,9 +55,23 @@ namespace state::in_play
 		Refresh();
 	}
 
+	static std::function<void()> Move(const common::XY<int>& delta)
+	{
+		return [delta]() 
+		{
+			game::Actors::MoveActor(delta);
+			game::Actors::Next();
+			application::UIState::Write(::UIState::IN_PLAY_NEXT);
+		};
+	}
+
 	static const std::map<::Command, std::function<void()>> commandTable =
 	{
-		{::Command::BACK, application::UIState::GoTo(::UIState::LEAVE_PLAY)}
+		{::Command::BACK, application::UIState::GoTo(::UIState::LEAVE_PLAY)},
+		{::Command::UP, Move({0,-1})},
+		{::Command::DOWN, Move({0,1})},
+		{::Command::LEFT, Move({-1,0})},
+		{::Command::RIGHT, Move({1,0})}
 	};
 
 	void Board::Start()
