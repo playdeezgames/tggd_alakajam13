@@ -5,5 +5,6 @@ namespace game
 	struct ActorTypeDescriptor
 	{
 		std::string sprite;
+		bool playControlled;
 	};
 }
