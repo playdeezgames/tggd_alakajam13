@@ -278,8 +278,9 @@ namespace game
 		{ActorType::DELETED, DoNothing}
 	};
 
-	void Actors::Act(Actor& actor)
+	void Actors::Act()
 	{
+		Actor& actor = actors[actorIndex];
 		actions.find(actor.actorType)->second(actor);
 	}
 }
