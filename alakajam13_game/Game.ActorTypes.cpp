@@ -14,6 +14,10 @@ namespace game
 		{ActorType::TURD_ROBOT_4, { "TurdRobot4", true }},
 		{ActorType::FENCE, { "Fence", false }},
 		{ActorType::PIG, { "Pig", false }},
+		{ActorType::PECKISH_PIG, { "PeckishPig", false }},
+		{ActorType::HUNGRY_PIG, { "HungryPig", false }},
+		{ActorType::STARVING_PIG, { "StarvingPig", false }},
+		{ActorType::DEAD_PIG, { "DeadPig", false }},
 		{ActorType::TRASH, { "Trash", false }},
 		{ActorType::TURD, { "Turd", false }},
 		{ActorType::DELETED, { "", false }}

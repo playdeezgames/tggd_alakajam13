@@ -13,6 +13,10 @@ namespace game
 		TURD_ROBOT_4,
 		FENCE,
 		PIG,
+		PECKISH_PIG,
+		HUNGRY_PIG,
+		STARVING_PIG,
+		DEAD_PIG,
 		TRASH,
 		TURD,
 		DELETED

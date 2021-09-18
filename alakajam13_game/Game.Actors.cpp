@@ -217,8 +217,40 @@ namespace game
 		{false, 4}
 	};
 
+	static void DoPigStarvation(Actor& actor)
+	{
+		auto health = actor.statistics[Statistic::HEALTH];
+		if (health > 0)
+		{
+			health--;
+			actor.actorType = ActorType::STARVING_PIG;
+			return;
+		}
+		actor.actorType = ActorType::DEAD_PIG;
+	}
+
+	static const int MAXIMUM_PIG_HUNGER = 100;
+
+	static void DoPigHunger(Actor& actor)
+	{
+		auto hunger = actor.statistics[Statistic::HUNGER];
+		if (hunger < MAXIMUM_PIG_HUNGER)
+		{
+			hunger++;
+			actor.statistics[Statistic::HUNGER] = hunger;
+			actor.actorType =
+				(hunger < 25) ? (ActorType::PIG) :
+				(hunger < 50) ? (ActorType::PECKISH_PIG) :
+				(hunger < 75) ? (ActorType::HUNGRY_PIG) :
+				(ActorType::STARVING_PIG);
+			return;
+		}
+		DoPigStarvation(actor);
+	}
+
 	static void BeAPig(Actor& actor)
 	{
+		DoPigHunger(actor);
 		if (common::RNG::FromGenerator(moveGenerator, false))
 		{
 			auto delta = common::RNG::FromList(moveDeltas).value();
@@ -237,6 +269,10 @@ namespace game
 	{
 		{ActorType::FENCE, DoNothing},
 		{ActorType::PIG, BeAPig},
+		{ActorType::PECKISH_PIG, BeAPig},
+		{ActorType::HUNGRY_PIG, BeAPig},
+		{ActorType::STARVING_PIG, BeAPig},
+		{ActorType::DEAD_PIG, DoNothing},
 		{ActorType::TRASH, DoNothing},
 		{ActorType::TURD, DoNothing},
 		{ActorType::DELETED, DoNothing}
