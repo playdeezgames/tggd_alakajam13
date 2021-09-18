@@ -35,12 +35,24 @@ namespace game
 
 	static const int BOARD_SIZE = 15;
 
+	static void AddRobot(const ActorType& actorType, const common::XY<int>& location)
+	{
+		Actors::AddActor(
+			{
+				actorType,
+				location,
+				{
+					{Statistic::ENERGY, 100}
+				}
+			});
+	}
+
 	static void AddRobots()
 	{
-		Actors::AddActor({ ActorType::ROBOT_1, {0,-1} });
-		Actors::AddActor({ ActorType::ROBOT_2, {1,0} });
-		Actors::AddActor({ ActorType::ROBOT_3, {0,1} });
-		Actors::AddActor({ ActorType::ROBOT_4, {-1,0} });
+		AddRobot( ActorType::ROBOT_1, {0,-1} );
+		AddRobot( ActorType::ROBOT_2, {1,0} );
+		AddRobot( ActorType::ROBOT_3, {0,1} );
+		AddRobot( ActorType::ROBOT_4, {-1,0} );
 	}
 
 	static void AddFence()
@@ -58,12 +70,26 @@ namespace game
 		Actors::AddActor({ ActorType::FENCE, {BOARD_SIZE,BOARD_SIZE} });
 	}
 
+	static void AddPig(const common::XY<int>& location)
+	{
+		Actors::AddActor(
+			{
+				ActorType::PIG,
+				location,
+				{
+					{Statistic::HEALTH, 100},
+					{Statistic::HUNGER, 0},
+					{Statistic::BOWEL, 0},
+				}
+			});
+	}
+
 	static void AddPigs()
 	{
-		Actors::AddActor({ ActorType::PIG, {-BOARD_SIZE+1,-BOARD_SIZE+1} });
-		Actors::AddActor({ ActorType::PIG, {-BOARD_SIZE+1,BOARD_SIZE-1} });
-		Actors::AddActor({ ActorType::PIG, {BOARD_SIZE-1,-BOARD_SIZE+1} });
-		Actors::AddActor({ ActorType::PIG, {BOARD_SIZE-1,BOARD_SIZE-1} });
+		AddPig({-BOARD_SIZE+1,-BOARD_SIZE+1} );
+		AddPig({-BOARD_SIZE+1,BOARD_SIZE-1} );
+		AddPig({BOARD_SIZE-1,-BOARD_SIZE+1} );
+		AddPig({BOARD_SIZE-1,BOARD_SIZE-1} );
 	}
 
 	static void AddTrash()

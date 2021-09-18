@@ -16,3 +16,8 @@ https://game-icons.net/1x1/delapouite/trash-can.html
 https://game-icons.net/1x1/lorc/turd.html
 https://game-icons.net/1x1/skoll/pig.html
 https://game-icons.net/1x1/lorc/wooden-fence.html
+https://game-icons.net/1x1/priorblue/battery-0.html
+https://game-icons.net/1x1/priorblue/battery-25.html
+https://game-icons.net/1x1/priorblue/battery-50.html
+https://game-icons.net/1x1/priorblue/battery-75.html
+https://game-icons.net/1x1/priorblue/battery-100.html

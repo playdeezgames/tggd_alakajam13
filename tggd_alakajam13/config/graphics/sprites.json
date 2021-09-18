@@ -3247,6 +3247,34 @@
         "width": 36,
         "height": 36
     },
+    "Battery0": {
+        "texture": "tiles",
+        "x": 216,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Battery25": {
+        "texture": "tiles",
+        "x": 252,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Battery50": {
+        "texture": "tiles",
+        "x": 288,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Battery75": {
+        "texture": "tiles",
+        "x": 324,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
     "Robot2": {
         "texture": "tiles",
         "x": 0,
@@ -3278,6 +3306,13 @@
     "TurdRobot4": {
         "texture": "tiles",
         "x": 144,
+        "y": 36,
+        "width": 36,
+        "height": 36
+    },
+    "Battery100": {
+        "texture": "tiles",
+        "x": 180,
         "y": 36,
         "width": 36,
         "height": 36

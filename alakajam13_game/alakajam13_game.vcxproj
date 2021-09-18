@@ -31,6 +31,7 @@
     <ClInclude Include="Game.Difficulty.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Game.Colors.h" />
+    <ClInclude Include="Game.Statistic.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.Actors.cpp" />
