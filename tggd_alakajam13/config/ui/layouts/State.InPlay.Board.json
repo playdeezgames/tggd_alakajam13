@@ -1,0 +1,16 @@
+[
+    {
+        "type": "Image",
+        "sprite": "Splash",
+        "color": "White",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "type": "Image",
+        "sprite": "Frame",
+        "color": "White",
+        "x": 0,
+        "y": 0
+    }
+]
