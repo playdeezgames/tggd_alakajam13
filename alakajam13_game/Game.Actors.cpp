@@ -36,9 +36,9 @@ namespace game
 	static void AddRobots()
 	{
 		Actors::AddActor({ ActorType::ROBOT_1, {0,-1} });
-		//Actors::AddActor({ ActorType::ROBOT_2, {1,0} });
-		//Actors::AddActor({ ActorType::ROBOT_3, {0,1} });
-		//Actors::AddActor({ ActorType::ROBOT_4, {-1,0} });
+		Actors::AddActor({ ActorType::ROBOT_2, {1,0} });
+		Actors::AddActor({ ActorType::ROBOT_3, {0,1} });
+		Actors::AddActor({ ActorType::ROBOT_4, {-1,0} });
 	}
 
 	static void AddFence()
