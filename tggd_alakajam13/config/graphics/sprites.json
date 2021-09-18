@@ -3240,13 +3240,6 @@
         "width": 36,
         "height": 36
     },
-    "Grass": {
-        "texture": "tiles",
-        "x": 180,
-        "y": 0,
-        "width": 36,
-        "height": 36
-    },
     "Robot2": {
         "texture": "tiles",
         "x": 0,

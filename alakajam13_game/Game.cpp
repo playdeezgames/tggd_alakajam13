@@ -2,6 +2,7 @@
 #include <Data.SQLite.Store.h>
 #include <Data.SQLite.Stores.h>
 #include "Game.h"
+#include "Game.Actors.h"
 #include <list>
 #include <map>
 namespace game
@@ -23,6 +24,7 @@ namespace game
 	void Reset(const Difficulty& difficulty)
 	{
 		data::sqlite::Stores::Bounce(data::sqlite::Store::IN_MEMORY);
+		Actors::Reset(difficulty);
 		for (auto& resetter : resetters)
 		{
 			resetter();

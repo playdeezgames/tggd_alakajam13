@@ -19,6 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game.ActorTypeDescriptor.h" />
+    <ClInclude Include="Game.ActorTypes.h" />
+    <ClInclude Include="Game.Actor.h" />
+    <ClInclude Include="Game.Actors.h" />
+    <ClInclude Include="Game.ActorType.h" />
     <ClInclude Include="Game.Audio.GameSfx.h" />
     <ClInclude Include="Game.Audio.Mux.h" />
     <ClInclude Include="Game.Audio.Sfx.h" />
@@ -28,6 +33,8 @@
     <ClInclude Include="Game.Colors.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Game.Actors.cpp" />
+    <ClCompile Include="Game.ActorTypes.cpp" />
     <ClCompile Include="Game.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
