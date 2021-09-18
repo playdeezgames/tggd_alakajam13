@@ -3197,5 +3197,33 @@
         "y": 0,
         "width": 16,
         "height": 16
+    },
+    "Robot": {
+        "texture": "tiles",
+        "x": 0,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Trash": {
+        "texture": "tiles",
+        "x": 36,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Turd": {
+        "texture": "tiles",
+        "x": 72,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Pig": {
+        "texture": "tiles",
+        "x": 108,
+        "y": 0,
+        "width": 36,
+        "height": 36
     }
 }
