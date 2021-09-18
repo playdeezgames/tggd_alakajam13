@@ -9,5 +9,7 @@ enum class UIState
 	OPTIONS,
 	START_GAME,
 	LEAVE_PLAY,
-	TIP
+	TIP,
+	IN_PLAY_NEXT,
+	IN_PLAY_BOARD
 };

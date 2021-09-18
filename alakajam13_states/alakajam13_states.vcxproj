@@ -26,6 +26,8 @@
   <ItemGroup>
     <ClCompile Include="State.About.cpp" />
     <ClCompile Include="State.ConfirmQuit.cpp" />
+    <ClCompile Include="State.InPlay.Board.cpp" />
+    <ClCompile Include="State.InPlay.Next.cpp" />
     <ClCompile Include="State.LeavePlay.cpp" />
     <ClCompile Include="State.MainMenu.cpp" />
     <ClCompile Include="State.Options.cpp" />

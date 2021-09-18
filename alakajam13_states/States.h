@@ -33,5 +33,16 @@ namespace state
 	{
 		static void Start();
 	};
+	namespace in_play
+	{
+		struct Board
+		{
+			static void Start();
+		};
+		struct Next
+		{
+			static void Start();
+		};
+	}
 }
 

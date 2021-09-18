@@ -52,5 +52,11 @@
     <ClCompile Include="Sublayout.UIHamburger.cpp">
       <Filter>Source Files\Boilerplate</Filter>
     </ClCompile>
+    <ClCompile Include="State.InPlay.Board.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="State.InPlay.Next.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -83,6 +83,8 @@ namespace application
 		state::Options::Start,
 		state::StartGame::Start,
 		state::LeavePlay::Start,
+		state::in_play::Board::Start,
+		state::in_play::Next::Start,
 		game::DoAddResetter(visuals::Confirmations::Reset),
 		game::DoAddResetter(visuals::Messages::Reset),
 		game::Start,

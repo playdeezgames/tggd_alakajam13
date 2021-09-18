@@ -1,7 +1,7 @@
 [
     {
         "type": "Image",
-        "sprite": "Splash",
+        "sprite": "Background",
         "color": "White",
         "x": 0,
         "y": 0
