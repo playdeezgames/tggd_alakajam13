@@ -86,10 +86,6 @@ namespace application
 		game::DoAddResetter(visuals::Confirmations::Reset),
 		game::DoAddResetter(visuals::Messages::Reset),
 		game::Start,
-		state::LoadGame::Start,
-		state::SaveGame::Start,
-		state::ConfirmAbandon::Start,
-		state::ConfirmOverwrite::Start,
 		sublayout::UIHamburger::Start,
 		Options::Initialize,
 		visuals::Layouts::Start

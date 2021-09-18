@@ -25,14 +25,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="State.About.cpp" />
-    <ClCompile Include="State.ConfirmAbandon.cpp" />
-    <ClCompile Include="State.ConfirmOverwrite.cpp" />
     <ClCompile Include="State.ConfirmQuit.cpp" />
     <ClCompile Include="State.LeavePlay.cpp" />
-    <ClCompile Include="State.LoadGame.cpp" />
     <ClCompile Include="State.MainMenu.cpp" />
     <ClCompile Include="State.Options.cpp" />
-    <ClCompile Include="State.SaveGame.cpp" />
     <ClCompile Include="State.Splash.cpp" />
     <ClCompile Include="State.StartGame.cpp" />
     <ClCompile Include="State.Tip.cpp" />

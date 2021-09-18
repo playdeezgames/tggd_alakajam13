@@ -14,3 +14,4 @@ https://game-icons.net/1x1/lorc/vintage-robot.html
 https://game-icons.net/1x1/delapouite/trash-can.html
 https://game-icons.net/1x1/lorc/turd.html
 https://game-icons.net/1x1/skoll/pig.html
+https://game-icons.net/1x1/lorc/wooden-fence.html

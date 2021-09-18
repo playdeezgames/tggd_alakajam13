@@ -28,28 +28,16 @@
     <ClCompile Include="State.About.cpp">
       <Filter>Source Files\Boilerplate</Filter>
     </ClCompile>
-    <ClCompile Include="State.ConfirmAbandon.cpp">
-      <Filter>Source Files\Boilerplate</Filter>
-    </ClCompile>
-    <ClCompile Include="State.ConfirmOverwrite.cpp">
-      <Filter>Source Files\Boilerplate</Filter>
-    </ClCompile>
     <ClCompile Include="State.ConfirmQuit.cpp">
       <Filter>Source Files\Boilerplate</Filter>
     </ClCompile>
     <ClCompile Include="State.LeavePlay.cpp">
       <Filter>Source Files\Boilerplate</Filter>
     </ClCompile>
-    <ClCompile Include="State.LoadGame.cpp">
-      <Filter>Source Files\Boilerplate</Filter>
-    </ClCompile>
     <ClCompile Include="State.MainMenu.cpp">
       <Filter>Source Files\Boilerplate</Filter>
     </ClCompile>
     <ClCompile Include="State.Options.cpp">
-      <Filter>Source Files\Boilerplate</Filter>
-    </ClCompile>
-    <ClCompile Include="State.SaveGame.cpp">
       <Filter>Source Files\Boilerplate</Filter>
     </ClCompile>
     <ClCompile Include="State.Splash.cpp">

@@ -9,5 +9,6 @@
     "card-back": "assets/images/card-back.png",
     "ui-hamburger": "assets/images/ui-hamburger.png",
     "ui-close": "assets/images/ui-close.png",
-    "tiles": "assets/images/tiles.png"
+    "tiles": "assets/images/tiles.png",
+    "frame": "assets/images/frame.png"
 }

@@ -18,7 +18,6 @@ namespace state
 
 	enum class StartGameItem
 	{
-		CONTINUE_GAME,
 		NEW_GAME_EASY,
 		NEW_GAME_NORMAL,
 		NEW_GAME_HARD,
@@ -41,7 +40,6 @@ namespace state
 		{ StartGameItem::NEW_GAME_NORMAL, NewGame(game::Difficulty::NORMAL) },
 		{ StartGameItem::NEW_GAME_HARD, NewGame(game::Difficulty::HARD) },
 		{ StartGameItem::NEW_GAME_HARDCORE, NewGame(game::Difficulty::HARDCORE) },
-		{ StartGameItem::CONTINUE_GAME, ::application::UIState::GoTo(::UIState::LOAD_GAME) },
 		{ StartGameItem::BACK, ::application::UIState::GoTo(::UIState::MAIN_MENU) }
 	};
 

@@ -19,19 +19,13 @@ namespace state
 	enum class LeavePlayItem
 	{
 		CONTINUE,
-		SAVE,
 		OPTIONS,
 		ABANDON
 	};
 
 	static void GoToConfirmAbandon()
 	{
-		::application::UIState::Write(::UIState::CONFIRM_ABANDON);
-	}
-
-	static void GoToSaveGame()
-	{
-		::application::UIState::Write(::UIState::SAVE_GAME);
+		::application::UIState::Write(::UIState::MAIN_MENU);
 	}
 
 	static void ContinueGame()
@@ -43,7 +37,6 @@ namespace state
 	static const std::map<LeavePlayItem, std::function<void()>> activators =
 	{
 		{ LeavePlayItem::ABANDON, GoToConfirmAbandon },
-		{ LeavePlayItem::SAVE, GoToSaveGame },
 		{ LeavePlayItem::CONTINUE, ContinueGame },
 		{ LeavePlayItem::OPTIONS, application::UIState::PushTo(::UIState::OPTIONS) }
 	};
