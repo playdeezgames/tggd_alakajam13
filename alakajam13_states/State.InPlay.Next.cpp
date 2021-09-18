@@ -16,6 +16,7 @@ namespace state::in_play
 		auto descriptor = game::ActorTypes::Read(actor.actorType);
 		while (!descriptor.playControlled)
 		{
+			game::Actors::Act(actor);
 			//TODO: whatever this actor does
 			game::Actors::Next();
 			actor = game::Actors::GetCurrent();

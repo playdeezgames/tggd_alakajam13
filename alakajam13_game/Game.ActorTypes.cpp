@@ -10,7 +10,8 @@ namespace game
 		{ActorType::ROBOT_4, { "Robot4", true }},
 		{ActorType::FENCE, { "Fence", false }},
 		{ActorType::PIG, { "Pig", false }},
-		{ActorType::TRASH, { "Trash", false }}
+		{ActorType::TRASH, { "Trash", false }},
+		{ActorType::TURD, { "Turd", false }}
 	};
 
 	const ActorTypeDescriptor& ActorTypes::Read(const ActorType& actorType)

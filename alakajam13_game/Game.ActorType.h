@@ -9,6 +9,7 @@ namespace game
 		ROBOT_4,
 		FENCE,
 		PIG,
-		TRASH
+		TRASH,
+		TURD
 	};
 }

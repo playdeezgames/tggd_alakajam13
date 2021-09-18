@@ -1,6 +1,10 @@
 #include "Game.Actors.h"
 #include "Game.ActorTypes.h"
 #include <vector>
+#include <map>
+#include <functional>
+#include <Common.RNG.h>
+#include <list>
 namespace game
 {
 	static std::vector<Actor> actors;
@@ -32,9 +36,9 @@ namespace game
 	static void AddRobots()
 	{
 		Actors::AddActor({ ActorType::ROBOT_1, {0,-1} });
-		Actors::AddActor({ ActorType::ROBOT_2, {1,0} });
-		Actors::AddActor({ ActorType::ROBOT_3, {0,1} });
-		Actors::AddActor({ ActorType::ROBOT_4, {-1,0} });
+		//Actors::AddActor({ ActorType::ROBOT_2, {1,0} });
+		//Actors::AddActor({ ActorType::ROBOT_3, {0,1} });
+		//Actors::AddActor({ ActorType::ROBOT_4, {-1,0} });
 	}
 
 	static void AddFence()
@@ -96,6 +100,7 @@ namespace game
 		auto otherIndex = FindActor(location);
 		if (otherIndex)
 		{
+			//TODO: interaction
 			return false;
 		}
 		actor.location = location;
@@ -109,4 +114,48 @@ namespace game
 		return DoMoveActor(actor, newLocation);
 	}
 
+	static void DoNothing(Actor&)
+	{
+		//as advertised!
+	}
+
+	static const std::list<common::XY<int>> moveDeltas = 
+	{
+		{-1,0},
+		{1,0},
+		{0,1},
+		{0,-1}
+	};
+
+	static const std::map<bool, size_t> turdGenerator =
+	{
+		{true, 1},
+		{false, 2}
+	};
+
+	static void BeAPig(Actor& actor)
+	{
+		auto delta = common::RNG::FromList(moveDeltas).value();
+		auto original = actor.location;
+		if (Actors::MoveActor(delta))
+		{
+			if (common::RNG::FromGenerator(turdGenerator, false))
+			{
+				Actors::AddActor({ActorType::TURD, original});
+			}
+		}
+	}
+
+	static const std::map<ActorType, std::function<void(Actor&)>> actions =
+	{
+		{ActorType::FENCE, DoNothing},
+		{ActorType::PIG, BeAPig},
+		{ActorType::TRASH, DoNothing},
+		{ActorType::TURD, DoNothing}
+	};
+
+	void Actors::Act(Actor& actor)
+	{
+		actions.find(actor.actorType)->second(actor);
+	}
 }
