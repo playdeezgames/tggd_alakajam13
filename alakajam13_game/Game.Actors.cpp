@@ -52,9 +52,9 @@ namespace game
 	static void AddRobots()
 	{
 		AddRobot( ActorType::ROBOT_1, {0,-1} );
-		//AddRobot( ActorType::ROBOT_2, {1,0} );
-		//AddRobot( ActorType::ROBOT_3, {0,1} );
-		//AddRobot( ActorType::ROBOT_4, {-1,0} );
+		AddRobot( ActorType::ROBOT_2, {1,0} );
+		AddRobot( ActorType::ROBOT_3, {0,1} );
+		AddRobot( ActorType::ROBOT_4, {-1,0} );
 	}
 
 	static void AddFence()
@@ -79,7 +79,7 @@ namespace game
 				ActorType::PIG,
 				location,
 				{
-					{Statistic::HEALTH, 100},
+					{Statistic::HEALTH, 25},
 					{Statistic::HUNGER, 0},
 					{Statistic::BOWEL, 0},
 				}
@@ -232,6 +232,7 @@ namespace game
 		{ActorType::FEED_ROBOT_4, ActorType::ROBOT_4}
 	};
 
+	static const int FEED_AMOUNT = 25;
 
 	static bool OnInteractPig(Actor& bumped, Actor& bumper)
 	{
@@ -240,7 +241,8 @@ namespace game
 		{
 			bumper.actorType = iter->second;
 			bumped.statistics[Statistic::BOWEL] = bumped.statistics[Statistic::BOWEL] + bumped.statistics[Statistic::HUNGER];
-			bumped.statistics[Statistic::HUNGER] = 0;
+			auto hunger = bumped.statistics[Statistic::HUNGER];
+			bumped.statistics[Statistic::HUNGER] = (hunger<FEED_AMOUNT) ? (0) : (hunger-FEED_AMOUNT);
 			return true;
 		}
 		return false;
@@ -411,7 +413,7 @@ namespace game
 		actions.find(actor.actorType)->second(actor);
 	}
 
-	static const int ENERGY_RECHARGE_RATE = 10;
+	static const int ENERGY_RECHARGE_RATE = 1;
 
 	static void Recharge(Actor& actor)
 	{
