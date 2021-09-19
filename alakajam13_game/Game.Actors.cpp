@@ -10,6 +10,7 @@ namespace game
 {
 	static std::vector<Actor> actors;
 	static size_t actorIndex = 0;
+	static const int MAXIMUM_ROBOT_ENERGY = 100;
 
 	void Actors::Next()
 	{
@@ -50,9 +51,9 @@ namespace game
 	static void AddRobots()
 	{
 		AddRobot( ActorType::ROBOT_1, {0,-1} );
-		AddRobot( ActorType::ROBOT_2, {1,0} );
-		AddRobot( ActorType::ROBOT_3, {0,1} );
-		AddRobot( ActorType::ROBOT_4, {-1,0} );
+		//AddRobot( ActorType::ROBOT_2, {1,0} );
+		//AddRobot( ActorType::ROBOT_3, {0,1} );
+		//AddRobot( ActorType::ROBOT_4, {-1,0} );
 	}
 
 	static void AddFence()
@@ -99,8 +100,8 @@ namespace game
 
 	static void AddBatteries()
 	{
-		Actors::AddActor({ ActorType::BATTERY_100, {-BOARD_SIZE / 2,0}, { { Statistic::ENERGY, 100} } });
-		Actors::AddActor({ ActorType::BATTERY_100, {BOARD_SIZE / 2,0}, { { Statistic::ENERGY, 100} } });
+		Actors::AddActor({ ActorType::BATTERY_0, {-BOARD_SIZE / 2,0}, { { Statistic::ENERGY, 0} } });
+		Actors::AddActor({ ActorType::BATTERY_0, {BOARD_SIZE / 2,0}, { { Statistic::ENERGY, 0} } });
 	}
 
 	void Actors::Reset(const Difficulty&)
@@ -169,10 +170,36 @@ namespace game
 		return false;
 	}
 
+	static void UpdateBatteryState(Actor& actor)
+	{
+		auto energy = actor.statistics[Statistic::ENERGY];
+		actor.actorType = (energy <= 0) ? (ActorType::BATTERY_0) :
+			(energy <= 25) ? (ActorType::BATTERY_25) :
+			(energy <= 50) ? (ActorType::BATTERY_50) :
+			(energy <= 75) ? (ActorType::BATTERY_75) :
+			(ActorType::BATTERY_100);
+	}
+
+	static bool OnInteractBattery(Actor& bumped, Actor& bumper)
+	{
+		int energy = bumper.statistics[Statistic::ENERGY];
+		int energyNeeded = MAXIMUM_ROBOT_ENERGY - energy;
+		int energyAvailable = bumped.statistics[Statistic::ENERGY];
+		int energyTransferred = (energyNeeded > energyAvailable) ? (energyAvailable) : (energyNeeded);
+		bumper.statistics[Statistic::ENERGY] = energy + energyTransferred;
+		bumped.statistics[Statistic::ENERGY] = energyAvailable - energyTransferred;
+		UpdateBatteryState(bumped);
+		return true;
+	}
+
 	static const std::map<ActorType, std::function<bool(Actor&, Actor&)>> interactors =
 	{
 		{ActorType::TURD, OnInteractTurd},
-		{ActorType::TRASH, OnInteractTrash}
+		{ActorType::TRASH, OnInteractTrash},
+		{ActorType::BATTERY_25, OnInteractBattery},
+		{ActorType::BATTERY_50, OnInteractBattery},
+		{ActorType::BATTERY_75, OnInteractBattery},
+		{ActorType::BATTERY_100, OnInteractBattery}
 	};
 
 	static void UseEnergy(Actor& actor)
@@ -295,6 +322,12 @@ namespace game
 		}
 	}
 
+	static void BeABattery(Actor& actor)
+	{
+		actor.statistics[Statistic::ENERGY]++;
+		UpdateBatteryState(actor);
+	}
+
 	static const std::map<ActorType, std::function<void(Actor&)>> actions =
 	{
 		{ActorType::FENCE, DoNothing},
@@ -306,10 +339,10 @@ namespace game
 		{ActorType::TRASH, DoNothing},
 		{ActorType::TURD, DoNothing},
 		{ActorType::DELETED, DoNothing},
-		{ActorType::BATTERY_0, DoNothing},
-		{ActorType::BATTERY_25, DoNothing},
-		{ActorType::BATTERY_50, DoNothing},
-		{ActorType::BATTERY_75, DoNothing},
+		{ActorType::BATTERY_0, BeABattery},
+		{ActorType::BATTERY_25, BeABattery},
+		{ActorType::BATTERY_50, BeABattery},
+		{ActorType::BATTERY_75, BeABattery},
 		{ActorType::BATTERY_100, DoNothing}
 	};
 
@@ -319,7 +352,6 @@ namespace game
 		actions.find(actor.actorType)->second(actor);
 	}
 
-	static const int MAXIMUM_ROBOT_ENERGY = 100;
 	static const int ENERGY_RECHARGE_RATE = 10;
 
 	static void Recharge(Actor& actor)
