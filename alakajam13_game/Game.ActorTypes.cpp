@@ -25,7 +25,8 @@ namespace game
 		{ActorType::BATTERY_25, { "Battery25", false, "MiniCharge", std::nullopt }},
 		{ActorType::BATTERY_50, { "Battery50", false, "MiniCharge", std::nullopt }},
 		{ActorType::BATTERY_75, { "Battery75", false, "MiniCharge", std::nullopt }},
-		{ActorType::BATTERY_100, { "Battery100", false, "MiniCharge", std::nullopt }}
+		{ActorType::BATTERY_100, { "Battery100", false, "MiniCharge", std::nullopt }},
+		{ActorType::GRAIN_SOURCE, { "WheatSack", false, "MiniWheat", std::nullopt }}
 	};
 
 	const ActorTypeDescriptor& ActorTypes::Read(const ActorType& actorType)

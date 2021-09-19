@@ -104,6 +104,12 @@ namespace game
 		Actors::AddActor({ ActorType::BATTERY_0, {BOARD_SIZE / 2,0}, { { Statistic::ENERGY, 0} } });
 	}
 
+	static void AddGrainSources()
+	{
+		Actors::AddActor({ ActorType::GRAIN_SOURCE, {0,-BOARD_SIZE / 2} });
+		Actors::AddActor({ ActorType::GRAIN_SOURCE, {0,BOARD_SIZE / 2} });
+	}
+
 	void Actors::Reset(const Difficulty&)
 	{
 		Clear();
@@ -112,6 +118,7 @@ namespace game
 		AddPigs();
 		AddTrash();
 		AddBatteries();
+		AddGrainSources();
 	}
 	
 	const std::vector<Actor>& Actors::All()
@@ -343,7 +350,8 @@ namespace game
 		{ActorType::BATTERY_25, BeABattery},
 		{ActorType::BATTERY_50, BeABattery},
 		{ActorType::BATTERY_75, BeABattery},
-		{ActorType::BATTERY_100, DoNothing}
+		{ActorType::BATTERY_100, DoNothing},
+		{ActorType::GRAIN_SOURCE, DoNothing}
 	};
 
 	void Actors::Act()

@@ -24,6 +24,7 @@ namespace game
 		BATTERY_25,
 		BATTERY_50,
 		BATTERY_75,
-		BATTERY_100
+		BATTERY_100,
+		GRAIN_SOURCE
 	};
 }
