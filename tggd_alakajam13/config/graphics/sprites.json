@@ -3352,6 +3352,41 @@
         "width": 36,
         "height": 36
     },
+    "WheatRobot1": {
+        "texture": "tiles",
+        "x": 36,
+        "y": 72,
+        "width": 36,
+        "height": 36
+    },
+    "WheatRobot2": {
+        "texture": "tiles",
+        "x": 72,
+        "y": 72,
+        "width": 36,
+        "height": 36
+    },
+    "WheatRobot3": {
+        "texture": "tiles",
+        "x": 108,
+        "y": 72,
+        "width": 36,
+        "height": 36
+    },
+    "WheatRobot4": {
+        "texture": "tiles",
+        "x": 144,
+        "y": 72,
+        "width": 36,
+        "height": 36
+    },
+    "WheatSack": {
+        "texture": "tiles",
+        "x": 180,
+        "y": 72,
+        "width": 36,
+        "height": 36
+    },
     "Robot4": {
         "texture": "tiles",
         "x": 0,
@@ -3412,6 +3447,20 @@
         "texture": "minitiles",
         "x": 48,
         "y": 0,
+        "width": 8,
+        "height": 8
+    },
+    "MiniWheat": {
+        "texture": "minitiles",
+        "x": 56,
+        "y": 0,
+        "width": 8,
+        "height": 8
+    },
+    "MiniCharge": {
+        "texture": "minitiles",
+        "x": 0,
+        "y": 8,
         "width": 8,
         "height": 8
     }

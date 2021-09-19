@@ -22,3 +22,5 @@ https://game-icons.net/1x1/priorblue/battery-50.html
 https://game-icons.net/1x1/priorblue/battery-75.html
 https://game-icons.net/1x1/priorblue/battery-100.html
 https://game-icons.net/1x1/delapouite/stomach.html
+https://game-icons.net/1x1/delapouite/grain.html
+https://game-icons.net/1x1/delapouite/grain-bundle.html
