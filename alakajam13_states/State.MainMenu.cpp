@@ -6,6 +6,7 @@
 #include <Application.UIState.h>
 #include <Common.Utility.h>
 #include <Data.JSON.Stores.h>
+#include <Game.h>
 #include <Game.Audio.Mux.h>
 #include "States.h"
 #include "UIState.h"
@@ -34,9 +35,15 @@ namespace state
 		::application::UIState::Write(::UIState::ABOUT);
 	}
 
+	static void StartGame()
+	{
+		game::Reset(game::Difficulty::NORMAL);
+		application::UIState::Write(::UIState::TIP);
+	}
+
 	static const std::map<MainMenuItem, std::function<void()>> activators =
 	{
-		{ MainMenuItem::START, ::application::UIState::GoTo(::UIState::START_GAME) },
+		{ MainMenuItem::START, StartGame },
 		{ MainMenuItem::OPTIONS, ::application::UIState::PushTo(::UIState::OPTIONS)  },
 		{ MainMenuItem::ABOUT, GoToAbout },
 		{ MainMenuItem::QUIT, ::application::UIState::GoTo(::UIState::CONFIRM_QUIT)  },
