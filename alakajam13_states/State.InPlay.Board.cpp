@@ -9,6 +9,7 @@
 #include <Visuals.SpriteGrid.h>
 #include <Game.Actors.h>
 #include <Game.ActorTypes.h>
+#include <Visuals.Images.h>
 namespace state::in_play
 {
 	static const ::UIState CURRENT_STATE = ::UIState::IN_PLAY_BOARD;
@@ -59,10 +60,31 @@ namespace state::in_play
 		RefreshActors();
 	}
 
+	static void RefreshBatteries()
+	{
+		for (const auto& actor : game::Actors::All())
+		{
+			auto descriptor = game::ActorTypes::Read(actor.actorType);
+			if (descriptor.powerImage)
+			{
+				auto energy = actor.statistics.find(game::Statistic::ENERGY)->second;
+				visuals::Images::SetSprite(
+					LAYOUT_NAME,
+					descriptor.powerImage.value(),
+					(energy <= 0) ? ("Battery0") :
+					(energy <= 25) ? ("Battery25") :
+					(energy <= 50) ? ("Battery50") :
+					(energy <= 75) ? ("Battery75") :
+					("Battery100"));
+			}
+		}
+	}
+
 	static void Refresh()
 	{
 		RefreshBoard();
 		RefreshMinimap();
+		RefreshBatteries();
 	}
 
 	static void OnEnter()
