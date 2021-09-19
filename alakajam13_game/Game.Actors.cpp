@@ -43,7 +43,8 @@ namespace game
 				actorType,
 				location,
 				{
-					{Statistic::ENERGY, 100}
+					{Statistic::ENERGY, 100},
+					{Statistic::TURDS_DEPOSITED, 0}
 				}
 			});
 	}
@@ -175,6 +176,7 @@ namespace game
 		auto iter = trashBumper.find(bumper.actorType);
 		if (iter != trashBumper.end())
 		{
+			bumper.statistics[Statistic::TURDS_DEPOSITED]++;
 			bumper.actorType = iter->second;
 			return true;
 		}

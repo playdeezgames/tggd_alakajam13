@@ -6,6 +6,7 @@ namespace game
 		ENERGY,
 		HUNGER,
 		HEALTH,
-		BOWEL
+		BOWEL,
+		TURDS_DEPOSITED
 	};
 }

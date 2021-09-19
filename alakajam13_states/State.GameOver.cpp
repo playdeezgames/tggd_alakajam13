@@ -11,6 +11,8 @@
 #include "States.h"
 #include "UIState.h"
 #include <Visuals.Texts.h>
+#include <Game.Actors.h>
+#include <format>
 namespace state
 {
 	static const std::string LAYOUT_NAME = "State.GameOver";
@@ -32,6 +34,16 @@ namespace state
 	static void OnEnter()
 	{
 		game::audio::Mux::Play(game::audio::Theme::LOSE);
+		int score = 0;
+		for (const auto& actor : game::Actors::All())
+		{
+			auto iter = actor.statistics.find(game::Statistic::TURDS_DEPOSITED);
+			if (iter != actor.statistics.end())
+			{
+				score += iter->second;
+			}
+		}
+		visuals::Texts::SetText(LAYOUT_NAME, TEXT_TIP_3, std::format("{}", score));
 	}
 
 	void GameOver::Start()
