@@ -163,13 +163,36 @@ namespace game
 		{ActorType::TURD_ROBOT_1, ActorType::ROBOT_1},
 		{ActorType::TURD_ROBOT_2, ActorType::ROBOT_2},
 		{ActorType::TURD_ROBOT_3, ActorType::ROBOT_3},
-		{ActorType::TURD_ROBOT_4, ActorType::ROBOT_4}
+		{ActorType::TURD_ROBOT_4, ActorType::ROBOT_4},
+		{ActorType::FEED_ROBOT_1, ActorType::ROBOT_1},
+		{ActorType::FEED_ROBOT_2, ActorType::ROBOT_2},
+		{ActorType::FEED_ROBOT_3, ActorType::ROBOT_3},
+		{ActorType::FEED_ROBOT_4, ActorType::ROBOT_4}
 	};
 
 	static bool OnInteractTrash(Actor& bumped, Actor& bumper)
 	{
 		auto iter = trashBumper.find(bumper.actorType);
 		if (iter != trashBumper.end())
+		{
+			bumper.actorType = iter->second;
+			return true;
+		}
+		return false;
+	}
+
+	static const std::map<ActorType, ActorType> grainSourceBumper =
+	{
+		{ActorType::ROBOT_1, ActorType::FEED_ROBOT_1},
+		{ActorType::ROBOT_2, ActorType::FEED_ROBOT_2},
+		{ActorType::ROBOT_3, ActorType::FEED_ROBOT_3},
+		{ActorType::ROBOT_4, ActorType::FEED_ROBOT_4}
+	};
+
+	static bool OnInteractGrainSource(Actor& bumped, Actor& bumper)
+	{
+		auto iter = grainSourceBumper.find(bumper.actorType);
+		if (iter != grainSourceBumper.end())
 		{
 			bumper.actorType = iter->second;
 			return true;
@@ -199,6 +222,29 @@ namespace game
 		return true;
 	}
 
+	static const std::map<ActorType, ActorType> pigBumper =
+	{
+		{ActorType::FEED_ROBOT_1, ActorType::ROBOT_1},
+		{ActorType::FEED_ROBOT_2, ActorType::ROBOT_2},
+		{ActorType::FEED_ROBOT_3, ActorType::ROBOT_3},
+		{ActorType::FEED_ROBOT_4, ActorType::ROBOT_4}
+	};
+
+
+	static bool OnInteractPig(Actor& bumped, Actor& bumper)
+	{
+		auto iter = pigBumper.find(bumper.actorType);
+		if (iter != pigBumper.end())
+		{
+			bumper.actorType = iter->second;
+			bumped.statistics[Statistic::BOWEL] = bumped.statistics[Statistic::BOWEL] + bumped.statistics[Statistic::HUNGER];
+			bumped.statistics[Statistic::HUNGER] = 0;
+			return true;
+		}
+		return false;
+	}
+
+
 	static const std::map<ActorType, std::function<bool(Actor&, Actor&)>> interactors =
 	{
 		{ActorType::TURD, OnInteractTurd},
@@ -206,7 +252,12 @@ namespace game
 		{ActorType::BATTERY_25, OnInteractBattery},
 		{ActorType::BATTERY_50, OnInteractBattery},
 		{ActorType::BATTERY_75, OnInteractBattery},
-		{ActorType::BATTERY_100, OnInteractBattery}
+		{ActorType::BATTERY_100, OnInteractBattery},
+		{ActorType::GRAIN_SOURCE, OnInteractGrainSource},
+		{ActorType::PIG, OnInteractPig},
+		{ActorType::PECKISH_PIG, OnInteractPig},
+		{ActorType::HUNGRY_PIG, OnInteractPig},
+		{ActorType::STARVING_PIG, OnInteractPig}
 	};
 
 	static void UseEnergy(Actor& actor)
@@ -268,12 +319,6 @@ namespace game
 		{0,-1}
 	};
 
-	static const std::map<bool, size_t> turdGenerator =
-	{
-		{true, 1},
-		{false, 2}
-	};
-
 	static const std::map<bool, size_t> moveGenerator =
 	{
 		{true, 1},
@@ -287,6 +332,7 @@ namespace game
 		{
 			health--;
 			actor.actorType = ActorType::STARVING_PIG;
+			actor.statistics[Statistic::HEALTH] = health;
 			return;
 		}
 		actor.actorType = ActorType::DEAD_PIG;
@@ -311,6 +357,8 @@ namespace game
 		DoPigStarvation(actor);
 	}
 
+	static const int MAXIMUM_PIG_BOWEL = 100;
+
 	static void BeAPig(Actor& actor)
 	{
 		
@@ -321,8 +369,9 @@ namespace game
 			auto original = actor.location;
 			if (Actors::MoveActor(delta))
 			{
-				if (common::RNG::FromGenerator(turdGenerator, false))
+				if (actor.statistics[Statistic::BOWEL]>=MAXIMUM_PIG_BOWEL)
 				{
+					actor.statistics[Statistic::BOWEL] -= MAXIMUM_PIG_BOWEL;
 					Actors::AddActor({ActorType::TURD, original});
 				}
 			}
@@ -378,7 +427,11 @@ namespace game
 		{ActorType::TURD_ROBOT_1, Recharge},
 		{ActorType::TURD_ROBOT_2, Recharge},
 		{ActorType::TURD_ROBOT_3, Recharge},
-		{ActorType::TURD_ROBOT_4, Recharge}
+		{ActorType::TURD_ROBOT_4, Recharge},
+		{ActorType::FEED_ROBOT_1, Recharge},
+		{ActorType::FEED_ROBOT_2, Recharge},
+		{ActorType::FEED_ROBOT_3, Recharge},
+		{ActorType::FEED_ROBOT_4, Recharge}
 	};
 
 	void Actors::Rest()
