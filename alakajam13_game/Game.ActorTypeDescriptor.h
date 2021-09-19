@@ -9,5 +9,6 @@ namespace game
 		bool playControlled;
 		std::string miniSprite;		
 		std::optional<std::string> powerImage;
+		bool alive;
 	};
 }

@@ -12,17 +12,21 @@ namespace state::in_play
 
 	static void OnEnter()
 	{
-		auto actor = game::Actors::GetCurrent();
-		auto descriptor = game::ActorTypes::Read(actor.actorType);
-		while (!descriptor.playControlled)
+		if (game::Actors::IsAnythingAlive())
 		{
-			game::Actors::Act();
-			//TODO: whatever this actor does
-			game::Actors::Next();
-			actor = game::Actors::GetCurrent();
-			descriptor = game::ActorTypes::Read(actor.actorType);
+			auto actor = game::Actors::GetCurrent();
+			auto descriptor = game::ActorTypes::Read(actor.actorType);
+			while (!descriptor.playControlled)
+			{
+				game::Actors::Act();
+				game::Actors::Next();
+				actor = game::Actors::GetCurrent();
+				descriptor = game::ActorTypes::Read(actor.actorType);
+			}
+			application::UIState::Write(::UIState::IN_PLAY_BOARD);
+			return;
 		}
-		application::UIState::Write(::UIState::IN_PLAY_BOARD);
+		//TODO: game over
 	}
 
 	static void OnUpdate(const unsigned int&)

@@ -15,5 +15,6 @@ namespace game
 		static bool MoveActor(const common::XY<int>&);
 		static void Act();
 		static void Rest();
+		static bool IsAnythingAlive();
 	};
 }

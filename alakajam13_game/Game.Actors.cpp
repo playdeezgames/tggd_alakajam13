@@ -440,4 +440,17 @@ namespace game
 		rests.find(actor.actorType)->second(actor);
 	}
 
+	bool Actors::IsAnythingAlive()
+	{
+		for (const auto actor : All())
+		{
+			auto descriptor = ActorTypes::Read(actor.actorType);
+			if (descriptor.alive)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
 }
