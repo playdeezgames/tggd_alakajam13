@@ -168,8 +168,17 @@ namespace game
 		{ActorType::TRASH, OnInteractTrash}
 	};
 
+	static void UseEnergy(Actor& actor)
+	{
+		if (actor.statistics.contains(Statistic::ENERGY))
+		{
+			actor.statistics[Statistic::ENERGY] = actor.statistics[Statistic::ENERGY] - 1;
+		}
+	}
+
 	static bool DoMoveActor(Actor& actor, const common::XY<int>& location)
 	{
+		UseEnergy(actor);
 		auto otherIndex = FindActor(location);
 		if (otherIndex)
 		{
@@ -185,11 +194,24 @@ namespace game
 		return true;
 	}
 
+	static bool CanMoveActor(Actor& actor)
+	{
+		if (actor.statistics.contains(Statistic::ENERGY))
+		{
+			return actor.statistics[Statistic::ENERGY] > 0;
+		}
+		return true;
+	}
+
 	bool Actors::MoveActor(const common::XY<int>& delta)
 	{
 		Actor& actor = actors[actorIndex];
-		auto newLocation = actor.location + delta;
-		return DoMoveActor(actor, newLocation);
+		if (CanMoveActor(actor))
+		{
+			auto newLocation = actor.location + delta;
+			return DoMoveActor(actor, newLocation);
+		}
+		return false;
 	}
 
 	static void DoNothing(Actor&)
@@ -214,7 +236,7 @@ namespace game
 	static const std::map<bool, size_t> moveGenerator =
 	{
 		{true, 1},
-		{false, 4}
+		{false, 1}
 	};
 
 	static void DoPigStarvation(Actor& actor)
@@ -250,9 +272,10 @@ namespace game
 
 	static void BeAPig(Actor& actor)
 	{
-		DoPigHunger(actor);
+		
 		if (common::RNG::FromGenerator(moveGenerator, false))
 		{
+			DoPigHunger(actor);
 			auto delta = common::RNG::FromList(moveDeltas).value();
 			auto original = actor.location;
 			if (Actors::MoveActor(delta))
@@ -283,4 +306,33 @@ namespace game
 		Actor& actor = actors[actorIndex];
 		actions.find(actor.actorType)->second(actor);
 	}
+
+	static const int MAXIMUM_ROBOT_ENERGY = 100;
+	static const int ENERGY_RECHARGE_RATE = 10;
+
+	static void Recharge(Actor& actor)
+	{
+		auto energy = actor.statistics[Statistic::ENERGY];
+		energy += ENERGY_RECHARGE_RATE;
+		actor.statistics[Statistic::ENERGY] = (energy > MAXIMUM_ROBOT_ENERGY) ? (MAXIMUM_ROBOT_ENERGY) : (energy);
+	}
+
+	static const std::map<ActorType, std::function<void(Actor&)>> rests =
+	{
+		{ActorType::ROBOT_1, Recharge},
+		{ActorType::ROBOT_2, Recharge},
+		{ActorType::ROBOT_3, Recharge},
+		{ActorType::ROBOT_4, Recharge},
+		{ActorType::TURD_ROBOT_1, Recharge},
+		{ActorType::TURD_ROBOT_2, Recharge},
+		{ActorType::TURD_ROBOT_3, Recharge},
+		{ActorType::TURD_ROBOT_4, Recharge}
+	};
+
+	void Actors::Rest()
+	{
+		Actor& actor = actors[actorIndex];
+		rests.find(actor.actorType)->second(actor);
+	}
+
 }

@@ -14,10 +14,22 @@ namespace state::in_play
 	static const ::UIState CURRENT_STATE = ::UIState::IN_PLAY_BOARD;
 	static const std::string LAYOUT_NAME = "State.InPlay.Board";
 	static const std::string SPRITE_GRID = "Grid";
+	static const std::string SPRITE_GRID_MINI = "Mini";
 	static const int BOARD_COLUMNS = 9;
 	static const int BOARD_ROWS = 9;
 	static const int BOARD_OFFSET_COLUMN = -4;
 	static const int BOARD_OFFSET_ROW = -4;
+
+	static void RefreshMinimap()
+	{
+		visuals::SpriteGrid::Clear(LAYOUT_NAME, SPRITE_GRID_MINI);
+		for (const auto& actor : game::Actors::All())
+		{
+			auto descriptor = game::ActorTypes::Read(actor.actorType);
+			visuals::SpriteGrid::SetCell(LAYOUT_NAME, SPRITE_GRID_MINI, actor.location, descriptor.miniSprite, "White");
+		}
+		visuals::SpriteGrid::SetCell(LAYOUT_NAME, SPRITE_GRID_MINI, game::Actors::GetCurrent().location, "MiniSelector", "White");
+	}
 
 	static void RefreshActors()
 	{
@@ -50,6 +62,7 @@ namespace state::in_play
 	static void Refresh()
 	{
 		RefreshBoard();
+		RefreshMinimap();
 	}
 
 	static void OnEnter()
@@ -70,13 +83,21 @@ namespace state::in_play
 		};
 	}
 
+	static void Rest()
+	{
+		game::Actors::Rest();
+		game::Actors::Next();
+		application::UIState::Write(::UIState::IN_PLAY_NEXT);
+	}
+
 	static const std::map<::Command, std::function<void()>> commandTable =
 	{
 		{::Command::BACK, application::UIState::GoTo(::UIState::LEAVE_PLAY)},
 		{::Command::UP, Move({0,-1})},
 		{::Command::DOWN, Move({0,1})},
 		{::Command::LEFT, Move({-1,0})},
-		{::Command::RIGHT, Move({1,0})}
+		{::Command::RIGHT, Move({1,0})},
+		{::Command::GREEN, Rest}
 	};
 
 	void Board::Start()

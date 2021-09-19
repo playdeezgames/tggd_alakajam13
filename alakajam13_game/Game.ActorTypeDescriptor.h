@@ -6,5 +6,6 @@ namespace game
 	{
 		std::string sprite;
 		bool playControlled;
+		std::string miniSprite;
 	};
 }

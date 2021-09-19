@@ -10,5 +10,7 @@
     "ui-hamburger": "assets/images/ui-hamburger.png",
     "ui-close": "assets/images/ui-close.png",
     "tiles": "assets/images/tiles.png",
-    "frame": "assets/images/boardframe.png"
+    "frame": "assets/images/boardframe.png",
+    "minimap": "assets/images/minimapframe.png",
+    "minitiles": "assets/images/minimaptiles.png"
 }

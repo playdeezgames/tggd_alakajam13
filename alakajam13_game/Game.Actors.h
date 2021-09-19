@@ -14,5 +14,6 @@ namespace game
 		static const std::vector<Actor>& All();
 		static bool MoveActor(const common::XY<int>&);
 		static void Act();
+		static void Rest();
 	};
 }

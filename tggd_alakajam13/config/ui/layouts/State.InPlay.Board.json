@@ -32,5 +32,25 @@
         "color": "White",
         "x": 162,
         "y": 162
+    },
+    {
+        "type": "Image",
+        "sprite": "Minimap",
+        "color": "White",
+        "x": 376,
+        "y": 0
+    },
+    {
+        "type": "SpriteGrid",
+        "sprite-grid-id": "Mini",
+        "color": "White",
+        "x": 496,
+        "y": 120,
+        "cell-width":8,
+        "cell-height":8,
+        "drop-shadow": false,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 0,
+        "drop-shadow-y": 0
     }
 ]
