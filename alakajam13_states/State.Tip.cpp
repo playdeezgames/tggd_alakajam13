@@ -30,7 +30,7 @@ namespace state
 		ticksLeft = (ticksLeft > ticks) ? (ticksLeft - ticks) : (0);
 		if (ticksLeft == 0)
 		{
-			TODO: application::UIState::Write(::UIState::IN_PLAY_NEXT);
+			application::UIState::Write(::UIState::IN_PLAY_NEXT);
 			ticksLeft = TICKS_TOTAL;
 		}
 	}

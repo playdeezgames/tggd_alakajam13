@@ -26,7 +26,7 @@ namespace state::in_play
 			application::UIState::Write(::UIState::IN_PLAY_BOARD);
 			return;
 		}
-		//TODO: game over
+		application::UIState::Write(::UIState::GAME_OVER);
 	}
 
 	static void OnUpdate(const unsigned int&)

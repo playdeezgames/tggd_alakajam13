@@ -58,5 +58,8 @@
     <ClCompile Include="State.InPlay.Next.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="State.GameOver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -11,5 +11,6 @@ enum class UIState
 	LEAVE_PLAY,
 	TIP,
 	IN_PLAY_NEXT,
-	IN_PLAY_BOARD
+	IN_PLAY_BOARD,
+	GAME_OVER
 };

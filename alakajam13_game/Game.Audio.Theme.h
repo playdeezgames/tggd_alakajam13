@@ -3,6 +3,7 @@ namespace game::audio
 {
 	enum class Theme
 	{
-		MAIN
+		MAIN,
+		LOSE
 	};
 }

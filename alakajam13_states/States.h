@@ -33,6 +33,10 @@ namespace state
 	{
 		static void Start();
 	};
+	struct GameOver
+	{
+		static void Start();
+	};
 	namespace in_play
 	{
 		struct Board
