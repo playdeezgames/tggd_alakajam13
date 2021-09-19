@@ -19,6 +19,11 @@ namespace game
 		DEAD_PIG,
 		TRASH,
 		TURD,
-		DELETED
+		DELETED,
+		BATTERY_0,
+		BATTERY_25,
+		BATTERY_50,
+		BATTERY_75,
+		BATTERY_100
 	};
 }

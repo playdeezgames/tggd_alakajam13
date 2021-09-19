@@ -97,6 +97,12 @@ namespace game
 		Actors::AddActor({ ActorType::TRASH, {0,0} });
 	}
 
+	static void AddBatteries()
+	{
+		Actors::AddActor({ ActorType::BATTERY_100, {-BOARD_SIZE / 2,0}, { { Statistic::ENERGY, 100} } });
+		Actors::AddActor({ ActorType::BATTERY_100, {BOARD_SIZE / 2,0}, { { Statistic::ENERGY, 100} } });
+	}
+
 	void Actors::Reset(const Difficulty&)
 	{
 		Clear();
@@ -104,6 +110,7 @@ namespace game
 		AddFence();
 		AddPigs();
 		AddTrash();
+		AddBatteries();
 	}
 	
 	const std::vector<Actor>& Actors::All()
@@ -298,7 +305,12 @@ namespace game
 		{ActorType::DEAD_PIG, DoNothing},
 		{ActorType::TRASH, DoNothing},
 		{ActorType::TURD, DoNothing},
-		{ActorType::DELETED, DoNothing}
+		{ActorType::DELETED, DoNothing},
+		{ActorType::BATTERY_0, DoNothing},
+		{ActorType::BATTERY_25, DoNothing},
+		{ActorType::BATTERY_50, DoNothing},
+		{ActorType::BATTERY_75, DoNothing},
+		{ActorType::BATTERY_100, DoNothing}
 	};
 
 	void Actors::Act()

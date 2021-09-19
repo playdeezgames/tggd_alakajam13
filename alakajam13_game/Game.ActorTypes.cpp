@@ -20,7 +20,12 @@ namespace game
 		{ActorType::DEAD_PIG, { "DeadPig", false, "MiniEmpty", std::nullopt }},
 		{ActorType::TRASH, { "Trash", false, "MiniTrash", std::nullopt }},
 		{ActorType::TURD, { "Turd", false, "MiniTurd", std::nullopt }},
-		{ActorType::DELETED, { "", false, "MiniEmpty", std::nullopt }}
+		{ActorType::DELETED, { "", false, "MiniEmpty", std::nullopt }},
+		{ActorType::BATTERY_0, { "Battery0", false, "MiniCharge", std::nullopt }},
+		{ActorType::BATTERY_25, { "Battery25", false, "MiniCharge", std::nullopt }},
+		{ActorType::BATTERY_50, { "Battery50", false, "MiniCharge", std::nullopt }},
+		{ActorType::BATTERY_75, { "Battery75", false, "MiniCharge", std::nullopt }},
+		{ActorType::BATTERY_100, { "Battery100", false, "MiniCharge", std::nullopt }}
 	};
 
 	const ActorTypeDescriptor& ActorTypes::Read(const ActorType& actorType)
