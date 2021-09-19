@@ -6,6 +6,7 @@
 #include <Common.RNG.h>
 #include <list>
 #include <set>
+#include "Game.Audio.Sfx.h"
 namespace game
 {
 	static std::vector<Actor> actors;
@@ -152,6 +153,7 @@ namespace game
 		auto iter = turdBumpers.find(bumper.actorType);
 		if(iter!=turdBumpers.end())
 		{
+			audio::Sfx::Play(audio::GameSfx::GET_TURD);
 			bumped.actorType = ActorType::DELETED;
 			bumper.actorType = iter->second;
 			return true;
@@ -171,13 +173,27 @@ namespace game
 		{ActorType::FEED_ROBOT_4, ActorType::ROBOT_4}
 	};
 
+	static const std::map<ActorType, int> turdCounts =
+	{
+		{ActorType::TURD_ROBOT_1, 1},
+		{ActorType::TURD_ROBOT_2, 1},
+		{ActorType::TURD_ROBOT_3, 1},
+		{ActorType::TURD_ROBOT_4, 1},
+		{ActorType::FEED_ROBOT_1, 0},
+		{ActorType::FEED_ROBOT_2, 0},
+		{ActorType::FEED_ROBOT_3, 0},
+		{ActorType::FEED_ROBOT_4, 0}
+	};
+
 	static bool OnInteractTrash(Actor& bumped, Actor& bumper)
 	{
 		auto iter = trashBumper.find(bumper.actorType);
 		if (iter != trashBumper.end())
 		{
-			bumper.statistics[Statistic::TURDS_DEPOSITED]++;
+			auto turdCount = turdCounts.find(bumper.actorType)->second;
+			bumper.statistics[Statistic::TURDS_DEPOSITED]+= turdCount;
 			bumper.actorType = iter->second;
+			audio::Sfx::Play((turdCount>0)?(audio::GameSfx::THROW_TURD):(audio::GameSfx::THROW_FEED));
 			return true;
 		}
 		return false;
@@ -196,6 +212,7 @@ namespace game
 		auto iter = grainSourceBumper.find(bumper.actorType);
 		if (iter != grainSourceBumper.end())
 		{
+			audio::Sfx::Play(audio::GameSfx::GET_FEED);
 			bumper.actorType = iter->second;
 			return true;
 		}
@@ -220,6 +237,7 @@ namespace game
 		int energyTransferred = (energyNeeded > energyAvailable) ? (energyAvailable) : (energyNeeded);
 		bumper.statistics[Statistic::ENERGY] = energy + energyTransferred;
 		bumped.statistics[Statistic::ENERGY] = energyAvailable - energyTransferred;
+		audio::Sfx::Play(audio::GameSfx::GET_CHARGE);
 		UpdateBatteryState(bumped);
 		return true;
 	}
@@ -239,6 +257,7 @@ namespace game
 		auto iter = pigBumper.find(bumper.actorType);
 		if (iter != pigBumper.end())
 		{
+			audio::Sfx::Play(audio::GameSfx::PIG_EAT);
 			bumper.actorType = iter->second;
 			bumped.statistics[Statistic::BOWEL] = bumped.statistics[Statistic::BOWEL] + bumped.statistics[Statistic::HUNGER];
 			auto hunger = bumped.statistics[Statistic::HUNGER];

@@ -10,6 +10,7 @@
 #include <Game.Actors.h>
 #include <Game.ActorTypes.h>
 #include <Visuals.Images.h>
+#include <Game.Audio.Sfx.h>
 namespace state::in_play
 {
 	static const ::UIState CURRENT_STATE = ::UIState::IN_PLAY_BOARD;
@@ -101,6 +102,10 @@ namespace state::in_play
 			{
 				game::Actors::Next();
 				application::UIState::Write(::UIState::IN_PLAY_NEXT);
+			}
+			else
+			{
+				game::audio::Sfx::Play(game::audio::GameSfx::NO_CHARGE);
 			}
 		};
 	}
