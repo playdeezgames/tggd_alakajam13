@@ -24,3 +24,12 @@ https://game-icons.net/1x1/priorblue/battery-100.html
 https://game-icons.net/1x1/delapouite/stomach.html
 https://game-icons.net/1x1/delapouite/grain.html
 https://game-icons.net/1x1/delapouite/grain-bundle.html
+
+charging station - yoink
+no energy for robot - shucks
+pick up wheat - tasty
+pick up turd - eww
+throw away turd - woohoo
+throw away wheat - meh
+feed pig - eat 
+pig death - deadmonster

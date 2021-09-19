@@ -3247,6 +3247,34 @@
         "width": 36,
         "height": 36
     },
+    "Battery0": {
+        "texture": "tiles",
+        "x": 216,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Battery25": {
+        "texture": "tiles",
+        "x": 252,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Battery50": {
+        "texture": "tiles",
+        "x": 288,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
+    "Battery75": {
+        "texture": "tiles",
+        "x": 324,
+        "y": 0,
+        "width": 36,
+        "height": 36
+    },
     "Robot2": {
         "texture": "tiles",
         "x": 0,
@@ -3282,9 +3310,79 @@
         "width": 36,
         "height": 36
     },
+    "Battery100": {
+        "texture": "tiles",
+        "x": 180,
+        "y": 36,
+        "width": 36,
+        "height": 36
+    },
+    "PeckishPig": {
+        "texture": "tiles",
+        "x": 216,
+        "y": 36,
+        "width": 36,
+        "height": 36
+    },
+    "HungryPig": {
+        "texture": "tiles",
+        "x": 252,
+        "y": 36,
+        "width": 36,
+        "height": 36
+    },
+    "StarvingPig": {
+        "texture": "tiles",
+        "x": 288,
+        "y": 36,
+        "width": 36,
+        "height": 36
+    },
+    "DeadPig": {
+        "texture": "tiles",
+        "x": 324,
+        "y": 36,
+        "width": 36,
+        "height": 36
+    },
     "Robot3": {
         "texture": "tiles",
         "x": 0,
+        "y": 72,
+        "width": 36,
+        "height": 36
+    },
+    "WheatRobot1": {
+        "texture": "tiles",
+        "x": 36,
+        "y": 72,
+        "width": 36,
+        "height": 36
+    },
+    "WheatRobot2": {
+        "texture": "tiles",
+        "x": 72,
+        "y": 72,
+        "width": 36,
+        "height": 36
+    },
+    "WheatRobot3": {
+        "texture": "tiles",
+        "x": 108,
+        "y": 72,
+        "width": 36,
+        "height": 36
+    },
+    "WheatRobot4": {
+        "texture": "tiles",
+        "x": 144,
+        "y": 72,
+        "width": 36,
+        "height": 36
+    },
+    "WheatSack": {
+        "texture": "tiles",
+        "x": 180,
         "y": 72,
         "width": 36,
         "height": 36
@@ -3295,5 +3393,75 @@
         "y": 108,
         "width": 36,
         "height": 36
+    },
+    "Minimap": {
+        "texture": "minimap",
+        "x": 0,
+        "y": 0,
+        "width": 248,
+        "height": 248
+    },
+    "MiniRobot": {
+        "texture": "minitiles",
+        "x": 0,
+        "y": 0,
+        "width": 8,
+        "height": 8
+    },
+    "MiniPig": {
+        "texture": "minitiles",
+        "x": 8,
+        "y": 0,
+        "width": 8,
+        "height": 8
+    },
+    "MiniSelector": {
+        "texture": "minitiles",
+        "x": 16,
+        "y": 0,
+        "width": 8,
+        "height": 8
+    },
+    "MiniTrash": {
+        "texture": "minitiles",
+        "x": 24,
+        "y": 0,
+        "width": 8,
+        "height": 8
+    },
+    "MiniFence": {
+        "texture": "minitiles",
+        "x": 32,
+        "y": 0,
+        "width": 8,
+        "height": 8
+    },
+    "MiniTurd": {
+        "texture": "minitiles",
+        "x": 40,
+        "y": 0,
+        "width": 8,
+        "height": 8
+    },
+    "MiniEmpty": {
+        "texture": "minitiles",
+        "x": 48,
+        "y": 0,
+        "width": 8,
+        "height": 8
+    },
+    "MiniWheat": {
+        "texture": "minitiles",
+        "x": 56,
+        "y": 0,
+        "width": 8,
+        "height": 8
+    },
+    "MiniCharge": {
+        "texture": "minitiles",
+        "x": 0,
+        "y": 8,
+        "width": 8,
+        "height": 8
     }
 }

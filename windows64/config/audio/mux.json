@@ -1,5 +1,5 @@
 {
     "main":"assets/audio/mux/main.ogg",
-    "lose":"assets/audio/mux/main.ogg",
+    "lose":"assets/audio/mux/lose.ogg",
     "win":"assets/audio/mux/main.ogg"
 }

@@ -32,5 +32,85 @@
         "color": "White",
         "x": 162,
         "y": 162
+    },
+    {
+        "type": "Image",
+        "sprite": "Minimap",
+        "color": "White",
+        "x": 376,
+        "y": 0
+    },
+    {
+        "type": "SpriteGrid",
+        "sprite-grid-id": "Mini",
+        "color": "White",
+        "x": 496,
+        "y": 120,
+        "cell-width":8,
+        "cell-height":8,
+        "drop-shadow": false,
+        "drop-shadow-color": "Black",
+        "drop-shadow-x": 0,
+        "drop-shadow-y": 0
+    },
+    {
+        "type": "Image",
+        "sprite": "Robot1",
+        "color": "White",
+        "x": 360,
+        "y": 248
+    },
+    {
+        "type": "Image",
+        "sprite": "Robot2",
+        "color": "White",
+        "x": 360,
+        "y": 284
+    },
+    {
+        "type": "Image",
+        "sprite": "Robot3",
+        "color": "White",
+        "x": 500,
+        "y": 248
+    },
+    {
+        "type": "Image",
+        "sprite": "Robot4",
+        "color": "White",
+        "x": 500,
+        "y": 284
+    },
+    {
+        "type": "Image",
+        "image-id": "Battery1",
+        "sprite": "Battery100",
+        "color": "White",
+        "x": 396,
+        "y": 248
+    },
+    {
+        "type": "Image",
+        "image-id": "Battery2",
+        "sprite": "Battery100",
+        "color": "White",
+        "x": 396,
+        "y": 284
+    },
+    {
+        "type": "Image",
+        "image-id": "Battery3",
+        "sprite": "Battery100",
+        "color": "White",
+        "x": 536,
+        "y": 248
+    },
+    {
+        "type": "Image",
+        "image-id": "Battery4",
+        "sprite": "Battery100",
+        "color": "White",
+        "x": 536,
+        "y": 284
     }
 ]

@@ -1,3 +1,10 @@
 {
-  "woohoo": "assets/audio/sfx/woohoo.wav"
+  "deadmonster": "assets/audio/sfx/deadmonster.wav",  
+  "eat": "assets/audio/sfx/eat.wav",  
+  "eww": "assets/audio/sfx/eww.wav",  
+  "meh": "assets/audio/sfx/meh.wav",  
+  "shucks": "assets/audio/sfx/shucks.wav",  
+  "tasty": "assets/audio/sfx/tasty.wav",  
+  "woohoo": "assets/audio/sfx/woohoo.wav",  
+  "yoink": "assets/audio/sfx/yoink.wav"
 }

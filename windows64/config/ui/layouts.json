@@ -8,6 +8,7 @@
     "State.LeavePlay": "config/ui/layouts/State.LeavePlay.json",
     "Sublayout.Modded":"config/ui/layouts/Sublayout.Modded.json",
     "State.Tip":"config/ui/layouts/State.Tip.json",
+    "State.GameOver":"config/ui/layouts/State.GameOver.json",
     "State.InPlay.Board":"config/ui/layouts/State.InPlay.Board.json",
     "Sublayout.UIHamburger":"config/ui/layouts/Sublayout.UIHamburger.json"
 }
